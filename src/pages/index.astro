@@ -1,63 +1,67 @@
 ---
 // import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro"
+import ForumEventCard from "../components/ForumEventCard.astro"
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<main>
-		<div class="hero">
-			<h1>Professionals Platform Series</h1>
-			<p>A forum convening professionals and A.A. across
-the United States and Canada to strengthen
-support for individuals with Alcohol Use Disorder.
-The platform will feature a series of conversations
-across sectors, beginning in July 2026.</p>
+    <main>
+        <div class="hero bg-cyan-100 p-4">
+            <div class="m-auto w-5xl">
+                <h1>Professionals Platform Series</h1>
+                <p class="font-italic">
+                    A forum convening professionals and A.A. across the United
+                    States and Canada to strengthen support for individuals with
+                    Alcohol Use Disorder. The platform will feature a series of
+                    conversations across sectors, beginning in July 2026.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="m-auto flex w-5xl">
+                <p>
+                    Join us for a new initiative focused on listening, learning,
+                    and sharing with the professional community. If you serve as
+                    a PI or CPC chair, or work closely with professionals, we
+                    encourage you to mark your calendar and share this with your
+                    professional network.
+                </p>
 
-<div>Thursday
-23 July, 2026
-Thursday
-22 October, 2026
-Dawn Klug
-LCMHC, CEAP
-Class A Trustee,
-Alcoholics Anonymous
-</div>
-<div>
-Chief Judge
-Kerry Meyer
-Class A Trustee,
-Alcoholics Anonymous
-</div>
-<div>
-7:00–8:30 PM ET
-6:00–7:30 PM CT
-4:00–5:30 PM PT
-</div>
-<div>
-	ONLINE FORUM
-</div>
-<div>
-Upcoming in
-2027
-<div>
-Veronica Ramirez
-Chief Probation Officer, Eastern
-District of Louisiana (ret.)
-Class A Trustee,
-Alcoholics Anonymous
-</div>
-<div>
-Molly Oliver
-Chief Operating Officer, Catholic
-Charities of Buffalo
-Class A T rustee,
-Alcoholics Anonymous
-</div></div>
+                <ForumEventCard />
+                <div>
+                    <p class="text-xl font-bold">Thursday 22 October, 2026</p>
+                    Chief Judge Kerry Meyer Class A Trustee, Alcoholics Anonymous
+                </div>
+                <div>
+                    <ul>
+                        <li>7:00 – 8:30 PM ET</li>
+                        <li>6:00 – 7:30 PM CT</li>
+                        <li>4:00 – 5:30 PM PT</li>
+                    </ul>
+                </div>
 
+                <div>ONLINE FORUM</div>
+            </div>
+        </div>
 
-		</div>
-	</main>
+        <div class="bg-orange-100 p-4">
+            <div class="m-auto flex w-5xl">
+                <div>
+                    Upcoming in 2027
+                    <div>
+                        Veronica Ramirez Chief Probation Officer, Eastern
+                        District of Louisiana (ret.) Class A Trustee, Alcoholics
+                        Anonymous
+                    </div>
+                    <div>
+                        Molly Oliver Chief Operating Officer, Catholic Charities
+                        of Buffalo Class A T rustee, Alcoholics Anonymous
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </Layout>

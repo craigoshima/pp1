@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@theme {
+    /* --font-display: "Satoshi", "sans-serif"; */
+    --breakpoint-3xl: 1920px;
+    --color-powderblue-050: #f3f9fc;
+    --color-powderblue-100: #e7f3f7;
+    --color-powderblue-200: #b9dfe9;
+    --color-powderblue-300: #99d3e0;
+    --color-powderblue-400: #63bacd;
+    --color-powderblue-500: #3fa2b8;
+    --color-powderblue-600: #2e859b;
+    --color-powderblue-700: #266b7e;
+    --color-powderblue-800: #235a69;
+    --color-powderblue-900: #224b58;
+    --color-powderblue-950: #17313a;
+    --color-zest-050: #fef7ee;
+    --color-zest-100: #fceed8;
+    --color-zest-200: #f8d9b0;
+    --color-zest-300: #f3bd7e;
+    --color-zest-400: #efa159;
+    --color-zest-500: #e97c26;
+    --color-zest-600: #da631c;
+    --color-zest-700: #b54b19;
+    --color-zest-800: #903c1c;
+    --color-zest-900: #753419;
+    --color-zest-950: #3f190b;
+
+    --color-avocado-100: oklch(0.99 0 0);
+    --color-avocado-200: oklch(0.98 0.04 113.22);
+    --color-avocado-300: oklch(0.94 0.11 115.03);
+    --color-avocado-400: oklch(0.92 0.19 114.08);
+    --color-avocado-500: oklch(0.84 0.18 117.33);
+    --color-avocado-600: oklch(0.53 0.12 118.34);
+    --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+    --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+    /* ... */
+}
