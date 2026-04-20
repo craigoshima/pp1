@@ -1,70 +1,154 @@
 ---
-
+import ForumEventCard from "../components/ForumEventCard.astro"
+import SectionColumned from "../components/SectionColumned.astro"
+import Clock from "../assets/clock.svg"
 ---
 
 <div class="m-auto">
     <main>
-        <div class="hero bg-cyan-100 p-4">
-            <div class="m-auto w-5xl">
-                <h1>Professionals Platform Series</h1>
-                <p class="font-italic">
-                    A forum convening professionals and A.A. across the United
-                    States and Canada to strengthen support for individuals with
-                    Alcohol Use Disorder. The platform will feature a series of
-                    conversations across sectors, beginning in July 2026.
-                </p>
-            </div>
-        </div>
-        <div>
-            <div class="m-auto flex w-5xl">
-                <p>
-                    Join us for a new initiative focused on listening, learning,
-                    and sharing with the professional community. If you serve as
-                    a PI or CPC chair, or work closely with professionals, we
-                    encourage you to mark your calendar and share this with your
-                    professional network.
-                </p>
-
-                <ForumEventCard />
+        <div class="hero pt-6">
+            <SectionColumned class="hero">
                 <div>
-                    <p class="text-xl font-bold">Thursday 22 October, 2026</p>
-                    Chief Judge Kerry Meyer Class A Trustee, Alcoholics Anonymous
+                    <h1 class="text-4xl font-bold">
+                        Professionals<br /> Platform Series
+                    </h1>
+                    <p class="py-4 pb-8 text-xl italic">
+                        A forum convening professionals and A.A. across the
+                        United States and Canada to strengthen support for
+                        individuals with Alcohol Use Disorder. The platform will
+                        feature a series of conversations across sectors,
+                        beginning in July 2026.
+                    </p>
                 </div>
-                <div>
-                    <ul>
-                        <li>7:00 – 8:30 PM ET</li>
-                        <li>6:00 – 7:30 PM CT</li>
-                        <li>4:00 – 5:30 PM PT</li>
-                    </ul>
+                <div class="text-right text-sm">
+                    English | Français | Español
                 </div>
-
-                <div>ONLINE FORUM</div>
-            </div>
-        </div>
-
-        <div class="bg-orange-100 p-4">
-            <div class="m-auto flex w-5xl">
-                <div>
-                    Upcoming in 2027
-                    <div>
-                        Veronica Ramirez Chief Probation Officer, Eastern
-                        District of Louisiana (ret.) Class A Trustee, Alcoholics
-                        Anonymous
-                    </div>
-                    <div>
-                        Molly Oliver Chief Operating Officer, Catholic Charities
-                        of Buffalo Class A T rustee, Alcoholics Anonymous
-                    </div>
-                </div>
-            </div>
+            </SectionColumned>
         </div>
     </main>
+    <div>
+        <SectionColumned>
+            <div class="flex flex-col gap-4">
+                <div class="relative grid grid-cols-2 gap-4 pt-4">
+                    <ForumEventCard>
+                        <div slot="dateinfo">
+                            <p>Thursday</p>
+                            <p class="text-xl">
+                                <strong>23 July 2026</strong>
+                            </p>
+                        </div>
+                        <main class="py-4">
+                            <h3 class="text-2xl"><strong>Dawn Klug</strong></h3>
+                            <p>LCMHC, CEAP</p>
+                            <p class="mt-4">
+                                Class A Trustee<br />Alcoholics Anonymous
+                            </p>
+                        </main>
+                    </ForumEventCard>
+                    <ForumEventCard>
+                        <div slot="dateinfo">
+                            <p>Thursday</p>
+                            <p class="text-xl">
+                                <strong>22 October, 2026</strong>
+                            </p>
+                        </div>
+                        <main class="py-4">
+                            <h3 class="text-2xl">
+                                <strong> Chief Judge<br /> Kerry Meyer</strong>
+                            </h3>
+                            <p class="mt-4">
+                                Class A Trustee<br /> Alcoholics Anonymous
+                            </p>
+                        </main>
+                    </ForumEventCard>
+                </div>
+                <div class="">
+                    <h2
+                        class="bg-zest-100 inline-flex rounded-full p-4 px-8 text-2xl font-bold italic"
+                    >
+                        Upcoming in 2027
+                    </h2>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
+                        <p class="text-lg font-bold">Veronica Ramirez</p>
+                        <p>
+                            Chief Probation Officer<br />Eastern District of
+                            Louisiana (ret.)
+                        </p>
+                        <p class="pt-4">
+                            Class A Trustee<br />Alcoholics Anonymous
+                        </p>
+                    </div>
+                    <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
+                        <p class="text-lg font-bold">Molly Oliver</p>
+                        <p>
+                            Chief Operating Officer<br />Catholic Charities of
+                            Buffalo
+                        </p>
+                        <p class="pt-4">
+                            Class A Trustee<br />Alcoholics Anonymous
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="mt-4 flex flex-col gap-4 rounded-2xl bg-gray-100 px-4 pt-4"
+            >
+                <div class="flex items-center gap-2">
+                    <!-- <Clock class="w-8" /> -->
+                    <div>
+                        <h3 class="text-lg font-bold">Online Forum</h3>
+                        <ul class="">
+                            <li>7:00 – 8:30 PM ET</li>
+                            <li>6:00 – 7:30 PM CT</li>
+                            <li>4:00 – 5:30 PM PT</li>
+                        </ul>
+                        <p class="mt-4 hidden">
+                            If you serve as a PI or CPC chair, or work closely
+                            with professionals, we encourage you to mark your
+                            calendar and share this with your professional
+                            network.
+                        </p>
+                    </div>
+                </div>
 
+                <div class="flex items-center gap-2">
+                    <!-- <Clock /> -->
+                    <div>
+                        <h3 class="font-bold">Contact Us:</h3>
+                        <p>
+                            <a
+                                href="mailto:info@professionalsplatform.org"
+                                class="text-blue-700"
+                                >info@professionalsplatform.org</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </SectionColumned>
+    </div>
     <style>
-        main {
-            background: var(--color-powderblue-100);
-            display: flex;
-            flex-direction: column;
+        .hero {
+            /* background: linear-gradient(
+            100deg,
+            #b9dfe9 38.62%,
+            rgba(149, 195, 207, 0.9) 65.62%,
+            rgba(63, 162, 184, 0.2) 119.73%
+        ); */
+            background: linear-gradient(
+                130deg,
+                var(--color-powderblue-200) 38.62%,
+                rgba(149, 195, 207, 0.9) 65.62%,
+                var(--color-powderblue-700) 119.73%
+            );
         }
+
+        /* main {
+        background: var(--color-powderblue-100);
+        display: flex;
+        flex-direction: column;
+    } */
     </style>
 </div>

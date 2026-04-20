@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    /* --font-display: "Satoshi", "sans-serif"; */
+    --font-display: "Open Sans", "sans-serif";
     --breakpoint-3xl: 1920px;
     --color-powderblue-050: #f3f9fc;
     --color-powderblue-100: #e7f3f7;

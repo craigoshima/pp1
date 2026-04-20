@@ -1,0 +1,14 @@
+---
+const { class: className, ...rest } = Astro.props
+---
+
+<div class="m-auto flex w-5xl">
+    <div class="grid-columns-2-1 grid w-full gap-x-4">
+        <slot />
+    </div>
+</div>
+<style>
+    .grid-columns-2-1 {
+        grid-template-columns: 2fr 1fr;
+    }
+</style>
