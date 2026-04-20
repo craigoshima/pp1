@@ -1,0 +1,33 @@
+<main>
+    <div class="message shadow-lg">
+        <div class="text-center">
+            <span class="block text-2xl font-bold"
+                >Professionals Platform Series</span
+            > is coming soon!
+        </div>
+    </div>
+</main>
+
+<style>
+    main {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 40% 1fr;
+        grid-template-rows: 1fr 200px 2fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        align-items: center;
+    }
+
+    .message {
+        background: var(--color-powderblue-300);
+        border-radius: 1em;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        height: 100%;
+        place-content: center;
+    }
+</style>
