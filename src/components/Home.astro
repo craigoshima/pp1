@@ -2,171 +2,204 @@
 import ForumEventCard from "../components/ForumEventCard.astro"
 import SectionColumned from "../components/SectionColumned.astro"
 import Clock from "../assets/clock.svg"
+import logoSrc from "/images/pps-logo.svg"
+import { Image } from "astro:assets"
 ---
 
-<div class="m-auto">
-    <main>
-        <div class="hero p-4 pt-6">
-            <SectionColumned class="hero">
-                <div>
-                    <h1 class="text-4xl font-bold">
-                        Professionals<br /> Platform Series
-                    </h1>
-                    <p class="py-4 pb-8 text-xl italic">
-                        A forum convening professionals and A.A. across the
-                        United States and Canada to strengthen support for
-                        individuals with Alcohol Use Disorder. The platform will
-                        feature a series of conversations across sectors,
-                        beginning in July 2026.
-                    </p>
-                </div>
-                <div class="text-right text-sm">
-                    English | Français | Español
-                </div>
-            </SectionColumned>
-        </div>
-    </main>
-    <div>
+<header class="hero">
+    <div class="mx-auto max-w-[1024px]">
         <SectionColumned>
-            <div class="flex flex-col gap-4">
-                <div class="relative grid gap-4 md:grid-cols-2">
-                    <ForumEventCard>
-                        <div slot="dateinfo">
-                            <p>Thursday</p>
-                            <p class="text-xl">
-                                <strong>23 July 2026</strong>
-                            </p>
-                        </div>
-                        <main class="py-4">
-                            <h3 class="text-2xl"><strong>Dawn Klug</strong></h3>
-                            <p>LCMHC, CEAP</p>
-                            <p class="mt-4">
-                                Class A Trustee<br />Alcoholics Anonymous
-                            </p>
-                        </main>
-                    </ForumEventCard>
-                    <ForumEventCard>
-                        <div slot="dateinfo">
-                            <p>Thursday</p>
-                            <p class="text-xl">
-                                <strong>22 October, 2026</strong>
-                            </p>
-                        </div>
-                        <main class="py-4">
-                            <h3 class="text-2xl">
-                                <strong> Chief Judge<br /> Kerry Meyer</strong>
-                            </h3>
-                            <p class="mt-4">
-                                Class A Trustee<br /> Alcoholics Anonymous
-                            </p>
-                        </main>
-                    </ForumEventCard>
-                </div>
-                <div class="">
-                    <h2
-                        class="bg-zest-100 inline-flex rounded-full p-4 px-8 text-2xl font-bold italic"
-                    >
-                        Upcoming in 2027
-                    </h2>
-                </div>
-                <div class="grid gap-4 md:grid-cols-2">
-                    <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
-                        <p class="text-lg font-bold">Veronica Ramirez</p>
-                        <p>
-                            Chief Probation Officer<br />Eastern District of
-                            Louisiana (ret.)
-                        </p>
-                        <p class="pt-4">
-                            Class A Trustee<br />Alcoholics Anonymous
-                        </p>
-                    </div>
-                    <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
-                        <p class="text-lg font-bold">Molly Oliver</p>
-                        <p>
-                            Chief Operating Officer<br />Catholic Charities of
-                            Buffalo
-                        </p>
-                        <p class="pt-4">
-                            Class A Trustee<br />Alcoholics Anonymous
-                        </p>
-                    </div>
-                </div>
+            <div>
+                <img
+                    src="/pp1/images/pps-logo.svg"
+                    alt="Professionals Platform Series"
+                    style="height:168px"
+                />
+                <p class="p-4 text-xl italic">
+                    A forum convening professionals and A.A. across the United
+                    States and Canada to strengthen support for individuals with
+                    Alcohol Use Disorder. The platform will feature a series of
+                    conversations across sectors, beginning in July 2026.
+                </p>
             </div>
-            <div
-                class="mt-4 flex flex-col gap-4 rounded-2xl bg-gray-100 px-4 pt-4"
-            >
-                <div class="flex items-center gap-2">
-                    <!-- <Clock class="w-8" /> -->
-                    <div>
-                        <h3 class="text-lg font-bold">Online Forum</h3>
-                        <ul class="mt-1">
-                            <li>7:00 – 8:30 PM ET</li>
-                            <li>6:00 – 7:30 PM CT</li>
-                            <li>4:00 – 5:30 PM PT</li>
-                        </ul>
-                        <p class="mt-4 hidden">
-                            If you serve as a PI or CPC chair, or work closely
-                            with professionals, we encourage you to mark your
-                            calendar and share this with your professional
-                            network.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-2">
-                    <!-- <Clock /> -->
-                    <div>
-                        <h3 class="text-lg font-bold">Links</h3>
-                        <p>
-                            <a
-                                href="https://www.aa.org/Cooperation-with-the-Professional-Community"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Cooperation with the Professional Community
-                                (CPC)
-                            </a>
-                        </p>
-                        <p class="mt-4">
-                            <a
-                                href="https://www.aa.org/public-information-committees"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Public Information Committees</a
-                            >
-                        </p>
-                        <h3 class="mt-4 text-lg font-bold">Contact Us</h3>
-                        <p>
-                            <a
-                                href="mailto:info@professionalsplatform.org"
-                                class="text-cyan-700"
-                                >info@professionalsplatform.org</a
-                            >
-                        </p>
-                    </div>
-                </div>
+            <div class="p-3 text-right text-sm">
+                English | Français | Español
             </div>
         </SectionColumned>
-        <style>
-            .hero {
-                /* background: linear-gradient(
+    </div>
+</header>
+<main class="mx-auto max-w-[1024px]">
+    <SectionColumned>
+        <div>
+            <div class="relative grid gap-4 sm:grid-cols-2">
+                <ForumEventCard>
+                    <div slot="dateinfo">
+                        <p>Thursday</p>
+                        <p class="text-xl">
+                            <strong>23 July 2026</strong>
+                        </p>
+                    </div>
+                    <main class="py-4">
+                        <h3 class="text-2xl">
+                            <strong
+                                >Dawn Klug<br /><small>M.S., LCMHC, CEAP</small
+                                ></strong
+                            >
+                        </h3>
+                        <p>
+                            President and Chief Operating Officer<br />
+                            Employee Assistance Network
+                        </p>
+
+                        <p class="mt-4">
+                            Class A Trustee<br />Alcoholics Anonymous
+                        </p>
+                    </main>
+                </ForumEventCard>
+                <ForumEventCard>
+                    <div slot="dateinfo">
+                        <p>Thursday</p>
+                        <p class="text-xl">
+                            <strong>22 October, 2026</strong>
+                        </p>
+                    </div>
+                    <main class="py-4">
+                        <h3 class="text-2xl">
+                            <strong> Chief Judge<br /> Kerry Meyer</strong>
+                        </h3>
+                        <p class="mt-4">
+                            Class A Trustee<br /> Alcoholics Anonymous
+                        </p>
+                    </main>
+                </ForumEventCard>
+            </div>
+            <div class="mt-4">
+                <h2 id="upcoming" class="text-2xl font-bold italic">
+                    Upcoming in 2027
+                </h2>
+            </div>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
+                    <p class="text-lg font-bold">Veronica Ramirez</p>
+                    <p>
+                        Chief U.S. Probation Officer<br />Eastern District of
+                        Louisiana (ret.)
+                    </p>
+                    <p class="pt-4">
+                        Class A Trustee<br />Alcoholics Anonymous
+                    </p>
+                </div>
+                <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
+                    <p class="text-lg font-bold">Molly Oliver</p>
+                    <p>
+                        Chief Operating Officer<br />Catholic Charities of
+                        Buffalo
+                    </p>
+                    <p class="pt-4">
+                        Class A Trustee<br />Alcoholics Anonymous
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 px-4 pt-4">
+            <div class="flex items-center gap-2">
+                <!-- <Clock class="w-8" /> -->
+                <div>
+                    <h3 class="text-lg font-bold">Online Forum</h3>
+                    <ul class="mt-1">
+                        <li>7:00 – 8:30 PM ET</li>
+                        <li>6:00 – 7:30 PM CT</li>
+                        <li>4:00 – 5:30 PM PT</li>
+                    </ul>
+                    <p class="mt-4 hidden">
+                        If you serve as a PI or CPC chair, or work closely with
+                        professionals, we encourage you to mark your calendar
+                        and share this with your professional network.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <!-- <Clock /> -->
+                <div>
+                    <h3 class="text-lg font-bold">Links</h3>
+                    <p>
+                        <a
+                            href="https://www.aa.org/Cooperation-with-the-Professional-Community"
+                            target="_blank"
+                            class="text-cyan-700"
+                            >Cooperation with the Professional Community (CPC)
+                        </a>
+                    </p>
+                    <p class="mt-4">
+                        <a
+                            href="https://www.aa.org/public-information-committees"
+                            target="_blank"
+                            class="text-cyan-700"
+                            >Public Information Committees</a
+                        >
+                    </p>
+                    <h3 class="mt-4 text-lg font-bold">Contact Us</h3>
+                    <p>
+                        <a
+                            href="mailto:info@professionalsplatform.org"
+                            class="text-cyan-700"
+                            >info@professionalsplatform.org</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+    </SectionColumned>
+</main>
+<style>
+    .hero {
+        /* background: linear-gradient(
             100deg,
             #b9dfe9 38.62%,
             rgba(149, 195, 207, 0.9) 65.62%,
             rgba(63, 162, 184, 0.2) 119.73%
         ); */
-                background: linear-gradient(
+        /* background: linear-gradient(
                     130deg,
                     var(--color-powderblue-200) 38.62%,
                     rgba(149, 195, 207, 0.9) 65.62%,
                     var(--color-powderblue-700) 119.73%
                 );
-            }
+                background: url("../assets/mono-chairs-1600.jpgf"); */
 
-            /* main {
+        background:
+            linear-gradient(
+                92deg,
+                #b9dfe9 30%,
+                rgba(153, 211, 224, 0.75) 60%,
+                rgba(8, 81, 113, 0.3) 94.45%
+            ),
+            url("/images/mono-chairs-1600.jpg") lightgray 50% / cover no-repeat;
+    }
+
+    #upcoming {
+        position: relative;
+        background-color: var(--color-zest-100);
+        display: inline-flex;
+        padding: 16px;
+        padding-right: 8px;
+        border-radius: 0.25em 0 0 0.25em;
+    }
+    #upcoming:after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -24px;
+        z-index: -1;
+        border-color: var(--color-zest-100);
+        border-width: 0 45px 45px 0;
+        transform: translateY(-50%) rotate(-45deg);
+    }
+
+    /* main {
         background: var(--color-powderblue-100);
         display: flex;
         flex-direction: column;
     } */
-        </style>
-    </div>
-</div>
+</style>
