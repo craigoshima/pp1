@@ -22,8 +22,26 @@ import { Image } from "astro:assets"
                     conversations across sectors, beginning in July 2026.
                 </p>
             </div>
-            <div class="p-3 text-right text-sm">
-                English | Español | Français
+            <div class="p-3 text-right">
+                <div
+                    class="bg-opacity-20 bg-powderblue-100 inline-block rounded-full px-4 py-1 text-right text-sm text-gray-400"
+                >
+                    <a
+                        href="https://professionalsplatform.org/media/2026-27%20PP%20Launch%20English-FN.pdf"
+                        class="text-cyan-800 hover:underline"
+                        target="_blank">English</a
+                    > |
+                    <a
+                        href="https://professionalsplatform.org/media/2026-27%20PP%20Launch%20Spanish-FN.pdf"
+                        class="text-cyan-800 hover:underline"
+                        target="_blank">Español</a
+                    > |
+                    <a
+                        href="https://professionalsplatform.org/media/2026-27%20PP%20Launch%20French-FN.pdf"
+                        class="text-cyan-800 hover:underline"
+                        target="_blank">Français</a
+                    >
+                </div>
             </div>
         </SectionColumned>
     </div>
@@ -111,16 +129,17 @@ import { Image } from "astro:assets"
                         <li>6:00 – 7:30 PM CT</li>
                         <li>4:00 – 5:30 PM PT</li>
                     </ul>
-                    <p class="mt-4 hidden">
-                        If you serve as a PI or CPC chair, or work closely with
-                        professionals, we encourage you to mark your calendar
-                        and share this with your professional network.
-                    </p>
+                    <ul class="mt-4">
+                        <li>Spanish and French interpretation available.</li>
+                        <li class="mt-2">
+                            Additional information, including virtual access
+                            details, forthcoming.
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="flex items-center gap-2">
-                <!-- <Clock /> -->
+            <div class="pb-4">
                 <div>
                     <h3 class="text-lg font-bold">Links</h3>
                     <p>
@@ -152,6 +171,7 @@ import { Image } from "astro:assets"
         </div>
     </SectionColumned>
 </main>
+
 <style>
     .hero {
         background:
