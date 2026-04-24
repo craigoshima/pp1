@@ -1,7 +1,7 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import ForumEventCard from "../components/ForumEventCard.astro"
-import SectionColumned from "../components/SectionColumned.astro"
+import Layout from "../../layouts/Layout.astro"
+import ForumEventCard from "../../components/ForumEventCard.astro"
+import SectionColumned from "../../components/SectionColumned.astro"
 ---
 
 <Layout>
@@ -14,22 +14,26 @@ import SectionColumned from "../components/SectionColumned.astro"
                         alt="Professionals Platform Series"
                         style="height:168px"
                     />
-                    <p class="p-4 text-xl italic">
-                        A forum convening professionals and A.A. across the
-                        United States and Canada to strengthen support for
-                        individuals with Alcohol Use Disorder. The platform will
-                        feature a series of conversations across sectors,
-                        beginning in July 2026.
+                    <h1 class="px-4 text-lg font-bold">
+                        Serie de plataformas para profesionales
+                    </h1>
+                    <p class="p-4 pt-2 text-xl italic">
+                        Un foro intersectorial que reúne a profesionales y
+                        miembros de Alcohólicos Anónimos de todo Estados Unidos
+                        y Canadá para fortalecer el apoyo a las personas con
+                        trastorno por consumo de alcohol. La plataforma ofrecerá
+                        una serie de conversaciones que comenzarán en julio de
+                        2026.
                     </p>
                 </div>
                 <div class="p-3 text-right">
                     <div
                         class="bg-opacity-20 bg-powderblue-100 inline-block rounded-full px-4 py-1 text-right text-sm text-gray-400"
                     >
-                        <span class="font-bold text-gray-800">English</span> |
-                        <a href="/es/" class="text-cyan-800 hover:underline"
-                            >Español</a
+                        <a href="/" class="text-cyan-800 hover:underline"
+                            >English</a
                         > |
+                        <span class="font-bold text-gray-800">Español</span> |
                         <a href="/fr/" class="text-cyan-800 hover:underline"
                             >Français</a
                         >
@@ -44,9 +48,9 @@ import SectionColumned from "../components/SectionColumned.astro"
                 <div class="relative grid gap-4 sm:grid-cols-2">
                     <ForumEventCard>
                         <div slot="dateinfo">
-                            <p>Thursday</p>
+                            <p>Jueves</p>
                             <p class="text-xl">
-                                <strong>23 July 2026</strong>
+                                <strong>23 de julio de 2026</strong>
                             </p>
                         </div>
                         <main class="px-2 py-4">
@@ -58,20 +62,21 @@ import SectionColumned from "../components/SectionColumned.astro"
                                 >
                             </h3>
                             <p>
-                                President and Chief Operating Officer<br />
-                                Employee Assistance Network
+                                Presidenta y Directora de Operaciones de la Red
+                                de Asistencia al Empleado
                             </p>
 
                             <p class="mt-4">
-                                Class A Trustee<br />Alcoholics Anonymous
+                                Miembro del consejo directivo de clase A de
+                                Alcohólicos Anónimos
                             </p>
                         </main>
                     </ForumEventCard>
                     <ForumEventCard>
                         <div slot="dateinfo">
-                            <p>Thursday</p>
+                            <p>Jueves</p>
                             <p class="text-xl">
-                                <strong>22 October, 2026</strong>
+                                <strong>22 de octubre de 2026</strong>
                             </p>
                         </div>
                         <main class="px-2 py-4">
@@ -80,35 +85,38 @@ import SectionColumned from "../components/SectionColumned.astro"
                             </h3>
                             <p>Minneapolis</p>
                             <p class="mt-4">
-                                Class A Trustee<br /> Alcoholics Anonymous
+                                Miembro del consejo directivo de clase A de
+                                Alcohólicos Anónimos
                             </p>
                         </main>
                     </ForumEventCard>
                 </div>
                 <div class="mt-4">
                     <h2 id="upcoming" class="text-2xl font-bold italic">
-                        Upcoming in 2027
+                        Próximamente en 2027
                     </h2>
                 </div>
                 <div class="mt-4 grid gap-4 sm:grid-cols-2">
                     <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
                         <p class="text-lg font-bold">Veronica Ramirez</p>
                         <p>
-                            Chief U.S. Probation Officer<br />Eastern District
-                            of Louisiana (ret.)
+                            Jefe del Servicio de Libertad Condicional de los
+                            Estados Unidos
                         </p>
                         <p class="pt-4">
-                            Class A Trustee<br />Alcoholics Anonymous
+                            Miembro del consejo directivo de clase A de
+                            Alcohólicos Anónimos
                         </p>
                     </div>
                     <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
                         <p class="text-lg font-bold">Molly Oliver</p>
                         <p>
-                            Chief Operating Officer<br />Catholic Charities of
+                            Directora de Operaciones, Caridades Católicas de
                             Buffalo
                         </p>
                         <p class="pt-4">
-                            Class A Trustee<br />Alcoholics Anonymous
+                            Miembro del consejo directivo de clase A de
+                            Alcohólicos Anónimos
                         </p>
                     </div>
                 </div>
@@ -117,19 +125,21 @@ import SectionColumned from "../components/SectionColumned.astro"
                 <div class="flex items-center gap-2">
                     <!-- <Clock class="w-8" /> -->
                     <div>
-                        <h3 class="text-lg font-bold">Online Forum</h3>
+                        <h3 class="text-lg font-bold">Foros en línea</h3>
                         <ul class="mt-1">
-                            <li>7:00 – 8:30 PM ET</li>
-                            <li>6:00 – 7:30 PM CT</li>
-                            <li>4:00 – 5:30 PM PT</li>
+                            <li>19:00–20:30 (hora del este)</li>
+                            <li>18:00–19:30 (hora del central)</li>
+                            <li>16:00–17:30 (hora del pacifico)</li>
                         </ul>
                         <ul class="mt-4">
                             <li>
-                                Spanish and French interpretation available.
+                                Servicio de interpretación disponible en español
+                                y francés.
                             </li>
                             <li class="mt-2">
-                                Additional information, including virtual access
-                                details, forthcoming.
+                                Próximamente se facilitará información
+                                adicional, incluidos los detalles de acceso
+                                virtual.
                             </li>
                         </ul>
                     </div>
@@ -137,25 +147,24 @@ import SectionColumned from "../components/SectionColumned.astro"
 
                 <div class="pb-4">
                     <div>
-                        <h3 class="text-lg font-bold">Links</h3>
+                        <h3 class="text-lg font-bold">Enlaces</h3>
                         <p>
                             <a
-                                href="https://www.aa.org/Cooperation-with-the-Professional-Community"
+                                href="https://www.aa.org/es/Cooperation-with-the-Professional-Community"
                                 target="_blank"
                                 class="text-cyan-700"
-                                >Cooperation with the Professional Community
-                                (CPC)
+                                >Cooperación con la Comunidad Profesional (CCP)
                             </a>
                         </p>
                         <p class="mt-4">
                             <a
-                                href="https://www.aa.org/public-information-committees"
+                                href="https://www.aa.org/es/public-information-committees"
                                 target="_blank"
                                 class="text-cyan-700"
-                                >Public Information Committees</a
+                                >Comités de Información Pública</a
                             >
                         </p>
-                        <h3 class="mt-4 text-lg font-bold">Contact Us</h3>
+                        <h3 class="mt-4 text-lg font-bold">Contáctanos</h3>
                         <p>
                             <a
                                 href="mailto:info@professionalsplatform.org"
