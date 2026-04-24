@@ -12,17 +12,21 @@ export default defineConfig({
     },
 
     redirects: {
-        "/letter-en":
+        "/letter":
             "https://professionalsplatform.org/media/English%20Steering%20Committee-FNLetter.pdf",
-        "/letter-es":
+        "/en/letter":
+            "https://professionalsplatform.org/media/English%20Steering%20Committee-FNLetter.pdf",
+        "/es/letter":
             "https://professionalsplatform.org/media/Spanish%20Steering%20Committee-FNLetter.pdf",
-        "/letter-fr":
+        "/fr/letter":
             "https://professionalsplatform.org/media/French%20Steering%20Committee-FNLetter.pdf",
-        "/flyer-en":
+        "/flyer":
             "https://professionalsplatform.org/media/2026-27%20PP%20Launch%20English-FN.pdf",
-        "/flyer-es":
+        "/en/flyer":
+            "https://professionalsplatform.org/media/2026-27%20PP%20Launch%20English-FN.pdf",
+        "/es/flyer":
             "https://professionalsplatform.org/media/2026-27%20PP%20Launch%20Spanish-FN.pdf",
-        "/flyer-fr":
+        "/fr/flyer":
             "https://professionalsplatform.org/media/2026-27%20PP%20Launch%20French-FN.pdf",
     },
 })
