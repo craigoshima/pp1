@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro"
 import ForumEventCard from "../../components/ForumEventCard.astro"
 import SectionColumned from "../../components/SectionColumned.astro"
+import LocaleSwitcher from "../../components/es/LocaleSwitcher.astro"
 ---
 
 <Layout>
@@ -11,12 +12,12 @@ import SectionColumned from "../../components/SectionColumned.astro"
                 <div>
                     <img
                         src="/images/pps-logo.svg"
-                        alt="Professionals Platform Series"
+                        alt="Serie de plataformas para profesionales"
                         style="height:168px"
                     />
-                    <h1 class="px-4 text-lg font-bold">
+                    <div class="px-4 text-lg font-bold">
                         Serie de plataformas para profesionales
-                    </h1>
+                    </div>
                     <p class="p-4 pt-2 text-xl italic">
                         Un foro intersectorial que reúne a profesionales y
                         miembros de Alcohólicos Anónimos de todo Estados Unidos
@@ -27,17 +28,7 @@ import SectionColumned from "../../components/SectionColumned.astro"
                     </p>
                 </div>
                 <div class="p-3 text-right">
-                    <div
-                        class="bg-opacity-20 bg-powderblue-100 inline-block rounded-full px-4 py-1 text-right text-sm text-gray-400"
-                    >
-                        <a href="/" class="text-cyan-800 hover:underline"
-                            >English</a
-                        > |
-                        <span class="font-bold text-gray-800">Español</span> |
-                        <a href="/fr/" class="text-cyan-800 hover:underline"
-                            >Français</a
-                        >
-                    </div>
+                    <LocaleSwitcher />
                 </div>
             </SectionColumned>
         </div>
@@ -122,57 +113,54 @@ import SectionColumned from "../../components/SectionColumned.astro"
                 </div>
             </div>
             <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 px-4 pt-4">
-                <div class="flex items-center gap-2">
+                <div class="flex gap-2">
                     <!-- <Clock class="w-8" /> -->
                     <div>
                         <h3 class="text-lg font-bold">Foros en línea</h3>
-                        <ul class="mt-1">
-                            <li>19:00–20:30 (hora del este)</li>
-                            <li>18:00–19:30 (hora del central)</li>
-                            <li>16:00–17:30 (hora del pacifico)</li>
-                        </ul>
-                        <ul class="mt-4">
-                            <li>
-                                Servicio de interpretación disponible en español
-                                y francés.
-                            </li>
-                            <li class="mt-2">
-                                Próximamente se facilitará información
-                                adicional, incluidos los detalles de acceso
-                                virtual.
-                            </li>
-                        </ul>
+                        <div class="mt-1">
+                            <p>19:00–20:30 (hora del este)</p>
+                            <p>18:00–19:30 (hora del central)</p>
+                            <p>16:00–17:30 (hora del pacifico)</p>
+                        </div>
+                        <p class="mt-4">
+                            Servicio de interpretación disponible en español y
+                            francés.
+                        </p>
+                        <p class="mt-2">
+                            Próximamente se facilitará información adicional,
+                            incluidos los detalles de acceso virtual.
+                        </p>
                     </div>
                 </div>
 
+                <div class="grow">
+                    <h3 class="text-lg font-bold">Enlaces</h3>
+                    <p>
+                        <a
+                            href="https://www.aa.org/es/Cooperation-with-the-Professional-Community"
+                            target="_blank"
+                            class="text-cyan-700"
+                            >Cooperación con la Comunidad Profesional (CCP)
+                        </a>
+                    </p>
+                    <p class="mt-4">
+                        <a
+                            href="https://www.aa.org/es/public-information-committees"
+                            target="_blank"
+                            class="text-cyan-700"
+                            >Comités de Información Pública</a
+                        >
+                    </p>
+                </div>
+
                 <div class="pb-4">
-                    <div>
-                        <h3 class="text-lg font-bold">Enlaces</h3>
-                        <p>
-                            <a
-                                href="https://www.aa.org/es/Cooperation-with-the-Professional-Community"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Cooperación con la Comunidad Profesional (CCP)
-                            </a>
-                        </p>
-                        <p class="mt-4">
-                            <a
-                                href="https://www.aa.org/es/public-information-committees"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Comités de Información Pública</a
-                            >
-                        </p>
-                        <h3 class="mt-4 text-lg font-bold">Contáctanos</h3>
-                        <p>
-                            <a
-                                href="mailto:info@professionalsplatform.org"
-                                class="text-cyan-700"
-                                >info@professionalsplatform.org</a
-                            >
-                        </p>
-                    </div>
+                    <h3 class="text-lg font-bold">Sobre nosotros</h3>
+                    <p>
+                        <a href="about" class="text-cyan-700">Sobre nosotros</a> |
+                        <a href="mailto:info@professionalsplatform.org"
+                            >Contáctanos</a
+                        >
+                    </p>
                 </div>
             </div>
         </SectionColumned>

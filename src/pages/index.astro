@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro"
 import ForumEventCard from "../components/ForumEventCard.astro"
 import SectionColumned from "../components/SectionColumned.astro"
+import LocaleSwitcher from "../components/LocaleSwitcher.astro"
 ---
 
 <Layout>
@@ -23,17 +24,7 @@ import SectionColumned from "../components/SectionColumned.astro"
                     </p>
                 </div>
                 <div class="p-3 text-right">
-                    <div
-                        class="bg-opacity-20 bg-powderblue-100 inline-block rounded-full px-4 py-1 text-right text-sm text-gray-400"
-                    >
-                        <span class="font-bold text-gray-800">English</span> |
-                        <a href="/es/" class="text-cyan-800 hover:underline"
-                            >Español</a
-                        > |
-                        <a href="/fr/" class="text-cyan-800 hover:underline"
-                            >Français</a
-                        >
-                    </div>
+                    <LocaleSwitcher />
                 </div>
             </SectionColumned>
         </div>
@@ -52,9 +43,8 @@ import SectionColumned from "../components/SectionColumned.astro"
                         <main class="px-2 py-4">
                             <h3 class="text-2xl">
                                 <strong
-                                    >Dawn Klug<br /><small
-                                        >M.S., LCMHC, CEAP</small
-                                    ></strong
+                                    ><span href="session">Dawn Klug</span><br
+                                    /><small>M.S., LCMHC, CEAP</small></strong
                                 >
                             </h3>
                             <p>
@@ -111,56 +101,51 @@ import SectionColumned from "../components/SectionColumned.astro"
                 </div>
             </div>
             <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 px-4 pt-4">
-                <div class="flex items-center gap-2">
+                <div class="flex gap-2">
                     <!-- <Clock class="w-8" /> -->
                     <div>
                         <h3 class="text-lg font-bold">Online Forum</h3>
-                        <ul class="mt-1">
-                            <li>7:00 – 8:30 PM ET</li>
-                            <li>6:00 – 7:30 PM CT</li>
-                            <li>4:00 – 5:30 PM PT</li>
-                        </ul>
-                        <ul class="mt-4">
-                            <li>
-                                Spanish and French interpretation available.
-                            </li>
-                            <li class="mt-2">
-                                Additional information, including virtual access
-                                details, forthcoming.
-                            </li>
-                        </ul>
+                        <div class="mt-1">
+                            <p>7:00 – 8:30 PM ET</p>
+                            <p>6:00 – 7:30 PM CT</p>
+                            <p>4:00 – 5:30 PM PT</p>
+                        </div>
+                        <p class="mt-4">
+                            Spanish and French interpretation available.
+                        </p>
+                        <p class="mt-2">
+                            Additional information, including virtual access
+                            details, forthcoming.
+                        </p>
                     </div>
                 </div>
 
+                <div class="grow">
+                    <h3 class="text-lg font-bold">Links</h3>
+                    <p>
+                        <a
+                            href="https://www.aa.org/Cooperation-with-the-Professional-Community"
+                            target="_blank"
+                            class="text-cyan-700"
+                            >Cooperation with the Professional Community (CPC)
+                        </a>
+                    </p>
+                    <p class="mt-4">
+                        <a
+                            href="https://www.aa.org/public-information-committees"
+                            target="_blank">Public Information Committees</a
+                        >
+                    </p>
+                </div>
+
                 <div class="pb-4">
-                    <div>
-                        <h3 class="text-lg font-bold">Links</h3>
-                        <p>
-                            <a
-                                href="https://www.aa.org/Cooperation-with-the-Professional-Community"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Cooperation with the Professional Community
-                                (CPC)
-                            </a>
-                        </p>
-                        <p class="mt-4">
-                            <a
-                                href="https://www.aa.org/public-information-committees"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Public Information Committees</a
-                            >
-                        </p>
-                        <h3 class="mt-4 text-lg font-bold">Contact Us</h3>
-                        <p>
-                            <a
-                                href="mailto:info@professionalsplatform.org"
-                                class="text-cyan-700"
-                                >info@professionalsplatform.org</a
-                            >
-                        </p>
-                    </div>
+                    <h3 class="text-lg font-bold">About</h3>
+                    <p>
+                        <a href="about" class="text-cyan-700">About Us</a> |
+                        <a href="mailto:info@professionalsplatform.org"
+                            >Contact Us</a
+                        >
+                    </p>
                 </div>
             </div>
         </SectionColumned>

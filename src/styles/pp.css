@@ -1,0 +1,25 @@
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+p {
+    /* margin-top: 1em; */
+}
+
+a[href] {
+    color: var(--color-cyan-700);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-cyan-600);
+    text-decoration: underline;
+    cursor: pointer !important;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 0.75em;
+    padding-left: 0.5em;
+}

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./opensans.css";
+@import "./pp.css";
 
 @theme {
     --font-display: "Open Sans", "sans-serif";

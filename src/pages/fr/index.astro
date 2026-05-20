@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro"
 import ForumEventCard from "../../components/ForumEventCard.astro"
 import SectionColumned from "../../components/SectionColumned.astro"
+import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
 ---
 
 <Layout>
@@ -24,21 +25,12 @@ import SectionColumned from "../../components/SectionColumned.astro"
                     </p>
                 </div>
                 <div class="p-3 text-right">
-                    <div
-                        class="bg-opacity-20 bg-powderblue-100 inline-block rounded-full px-4 py-1 text-right text-sm text-gray-400"
-                    >
-                        <a href="/" class="text-cyan-800 hover:underline"
-                            >English</a
-                        > |
-                        <a href="/es/" class="text-cyan-800 hover:underline"
-                            >Español</a
-                        > |
-                        <span class="font-bold text-gray-800">Français</span>
-                    </div>
+                    <LocaleSwitcher />
                 </div>
             </SectionColumned>
         </div>
     </header>
+
     <main class="mx-auto max-w-[1024px]">
         <SectionColumned>
             <div>
@@ -112,58 +104,53 @@ import SectionColumned from "../../components/SectionColumned.astro"
                 </div>
             </div>
             <div class="flex flex-col gap-4 rounded-2xl bg-gray-100 px-4 pt-4">
-                <div class="flex items-center gap-2">
-                    <!-- <Clock class="w-8" /> -->
+                <div class="flex gap-2">
                     <div>
                         <h3 class="text-lg font-bold">Forum Enligne</h3>
-                        <ul class="mt-1">
-                            <li>19 h 00 – 20 h 30 HE</li>
-                            <li>18 h 00 – 19 h 30 HC</li>
-                            <li>16 h 00 – 17 h 30 HP</li>
-                        </ul>
-                        <ul class="mt-4">
-                            <li>
-                                Interprétation en Espagnol et en Français
-                                disponible.
-                            </li>
-                            <li class="mt-2">
-                                D’autres informations, y compris les détails
-                                d’accès virtuel, seront communiquées
-                                prochainement.
-                            </li>
-                        </ul>
+                        <div class="mt-1">
+                            <p>19 h 00 – 20 h 30 HE</p>
+                            <p>18 h 00 – 19 h 30 HC</p>
+                            <p>16 h 00 – 17 h 30 HP</p>
+                        </div>
+                        <p class="mt-4">
+                            Interprétation en Espagnol et en Français
+                            disponible.
+                        </p>
+                        <p class="mt-2">
+                            D’autres informations, y compris les détails d’accès
+                            virtuel, seront communiquées prochainement.
+                        </p>
                     </div>
                 </div>
 
+                <div class="grow">
+                    <h3 class="text-lg font-bold">Liens</h3>
+                    <p>
+                        <a
+                            href="https://www.aa.org/fr/Cooperation-with-the-Professional-Community"
+                            target="_blank"
+                            class="text-cyan-700"
+                            >Collaboration avec les Milieux professionnels (CMP)
+                        </a>
+                    </p>
+                    <p class="mt-4">
+                        <a
+                            href="https://www.aa.org/fr/public-information-committees"
+                            target="_blank"
+                            class="text-cyan-700"
+                            >Comités de l’Information publique</a
+                        >
+                    </p>
+                </div>
+
                 <div class="pb-4">
-                    <div>
-                        <h3 class="text-lg font-bold">Liens</h3>
-                        <p>
-                            <a
-                                href="https://www.aa.org/fr/Cooperation-with-the-Professional-Community"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Collaboration avec les Milieux professionnels
-                                (CMP)
-                            </a>
-                        </p>
-                        <p class="mt-4">
-                            <a
-                                href="https://www.aa.org/fr/public-information-committees"
-                                target="_blank"
-                                class="text-cyan-700"
-                                >Comités de l’Information publique</a
-                            >
-                        </p>
-                        <h3 class="mt-4 text-lg font-bold">Nous contacter</h3>
-                        <p>
-                            <a
-                                href="mailto:info@professionalsplatform.org"
-                                class="text-cyan-700"
-                                >info@professionalsplatform.org</a
-                            >
-                        </p>
-                    </div>
+                    <h3 class="text-lg font-bold">À propos</h3>
+                    <p>
+                        <a href="about" class="text-cyan-700">À propos</a> |
+                        <a href="mailto:info@professionalsplatform.org"
+                            >Nous contacter</a
+                        >
+                    </p>
                 </div>
             </div>
         </SectionColumned>

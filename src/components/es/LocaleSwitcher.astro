@@ -1,0 +1,16 @@
+---
+import { localizePath } from "../../utils/i18n.ts"
+
+const currentPath = Astro.url.pathname
+const enPath = localizePath(currentPath, "en")
+const esPath = localizePath(currentPath, "es")
+const frPath = localizePath(currentPath, "fr")
+---
+
+<div
+    class="bg-opacity-20 bg-powderblue-100 inline-block rounded-full px-4 py-1 text-right text-sm text-gray-400"
+>
+    <a href={enPath} class="">English</a> |
+    <span class="font-bold text-gray-800">Español</span> |
+    <a href={frPath} class="">Français</a>
+</div>
