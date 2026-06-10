@@ -20,6 +20,12 @@ export default defineConfig({
     },
 
     redirects: {
+        "/en/faq":
+            "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
+        "/es/faq":
+            "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-es.docx",
+        "/fr/faq":
+            "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-fr.docx",
         "/letter":
             "https://professionalsplatform.org/media/English%20Steering%20Committee-FNLetter.pdf",
         "/en/letter":
