@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import Header from "../../components/fr/Header.astro"
+import Footer from "../../components/fr/Footer.astro"
 import ForumEventCard from "../../components/ForumEventCard.astro"
 import SectionColumned from "../../components/SectionColumned.astro"
 import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
@@ -8,24 +10,7 @@ import { getLocaleByPath } from "astro:i18n"
 ---
 
 <Layout>
-    <header class="hero">
-        <div class="mx-auto max-w-[1024px]">
-            <SectionColumned>
-                <div>
-                    <a href="/fr">
-                        <img
-                            src="/images/pps-logo.svg"
-                            alt="Professionals Platform Series"
-                            style="height:96px"
-                        />
-                    </a>
-                </div>
-                <div class="p-3 text-right">
-                    <LocaleSwitcher />
-                </div>
-            </SectionColumned>
-        </div>
-    </header>
+    <Header/>
     <main class="mx-auto max-w-[1024px]">
         <SectionColumned>
             <div class="pp-prose pl-3">
@@ -89,10 +74,14 @@ import { getLocaleByPath } from "astro:i18n"
                     partager des approches pratiques qui soutiennent les
                     professionnels en première ligne du rétablissement.
                 </p>
-                <p class="mt-4 mr-2"><a href="/fr">Retourner à l'accueil</a></p>
+                
             </div>
             <div class="flex flex-col rounded-2xl bg-gray-100 px-4 pt-4">
-                <h3 class="text-lg font-bold">Liens</h3>
+                <h3 class="text-lg font-bold">Nous contacter:</h3>
+                <p><a href="mailto:info@professionalsplatform.org" class="link">info@professionalsplatform.org</a></p>
+
+
+                <h3 class="mt-4 text-lg font-bold">Liens</h3>
                 <p>
                     <a
                         href="https://www.aa.org/fr/Cooperation-with-the-Professional-Community"
@@ -109,10 +98,11 @@ import { getLocaleByPath } from "astro:i18n"
                         >Comités de l’Information publique</a
                     >
                 </p>
+                
             </div>
         </SectionColumned>
     </main>
-
+    <Footer/>
     <style>
         .hero {
             background:

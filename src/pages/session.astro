@@ -1,71 +1,172 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import ForumEventCard from "../components/ForumEventCard.astro"
-import SectionColumned from "../components/SectionColumned.astro"
-import LocaleSwitcher from "../components/LocaleSwitcher.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+
+import { Image } from 'astro:assets';
+import photoKlug from "../assets/speakers/portrait-klug-dawn-marie-2026-07.jpg";
+import photoBarthwell from "../assets/speakers/portrait-barthwell-andrea-g-2026-07.jpg"; 
+import photoChow from "../assets/speakers/portrait-chow-matthew-c-2026-07.jpg"; 
+
 ---
 
 <Layout>
-    <header class="hero">
-        <div class="mx-auto max-w-[1024px]">
-            <SectionColumned>
-                <div>
-                    <a href="/">
-                        <img
-                            src="/images/pps-logo.svg"
-                            alt="Professionals Platform Series"
-                            style="height:96px"
-                        />
-                    </a>
-                </div>
-                <div class="p-3 text-right">
-                    <LocaleSwitcher />
-                </div>
-            </SectionColumned>
+    <Header/>
+    <article class="mx-auto max-w-[1024px] p-4">
+        <div class="mb-4">
+            <p>
+                <!-- <a href="/sessions">Sessions</a> 
+                <span class="text-gray-400">&gt; </span> -->
+                <span>23 July 2026</span>
+            </p>
+            <h1 class="text-2xl">What does a recovery-friendly workplace look like?</h1>
         </div>
-    </header>
-    <main class="mx-auto max-w-[1024px]">
-        Session Details
 
-        <p><a href="/">Home</a></p>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-2 prose border-gray-300 py-2 rounded-lg">
+                <p>Join Employee Assistance Program (EAP) professionals, doctors, and corporate leaders to explore practical ways to support employees affected by Alcohol Use Disorder (AUD) and build resilient, human-centered workplaces as AI reshapes how we work and recover.</p>
+                <p class="">Who Should Attend:</p>
+                <ul>
 
-        <style>
-            .hero {
-                background:
-                    linear-gradient(
-                        92deg,
-                        #b9dfe9 30%,
-                        rgba(153, 211, 224, 0.75) 60%,
-                        rgba(8, 81, 113, 0.3) 94.45%
-                    ),
-                    url("/images/mono-chairs-1600.jpg") lightgray 50% / cover
-                        no-repeat;
-            }
+                    <li>HR, people, wellness, and benefits professionals</li>
+                    <li>Employee Assistance Program (EAP) and workplace professionals</li>
+                    <li>Healthcare and behavioral health providers</li>
+                    <li>Recovery and community leaders</li>
+                    <li>Anyone interested in building recovery-friendly workplaces</li>
+                </ul>
+            </div>
 
-            #upcoming {
-                position: relative;
-                background-color: var(--color-zest-100);
-                display: inline-flex;
-                padding: 16px;
-                padding-right: 8px;
-                border-radius: 0.25em 0 0 0.25em;
-            }
-            #upcoming:after {
-                position: absolute;
-                content: "";
-                top: 50%;
-                right: -24px;
-                z-index: -1;
-                border-color: var(--color-zest-100);
-                border-width: 0 45px 45px 0;
-                transform: translateY(-50%) rotate(-45deg);
-            }
+            <div class="bg-gradient-to-b from-powderblue-100 to-powderblue-050 col-span-1 rounded-lg px-4 py-2">
+                <div>
+                    <strong>Thursday 23 July 2026</strong>
+                    <ul class="mt-1">
+                        <li>7:00–8:30 PM ET</li>
+                        <li>6:00–7:30 PM CT</li>
+                        <li>4:00–5:30 PM PT</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <strong>Virtual Access (Zoom)</strong>
+                    <div class="mt-1 grid grid-cols-[100px_1fr] ">
+                        <p class="fit-content">Meeting ID:</p>
+                        <p>xxxx-xxxx-xxxx</p>
+                        <p class="fit-content">Passcode:</p> 
+                        <p>xxxx</p>
+                    </div> 
+                </div>
+                <div class="mt-4">Spanish and French interpretation available</div>
+            </div>
+        </div>
 
-            /* main {
-        background: var(--color-powderblue-100);
+
+        <h2 class="text-2xl font-bold my-4">About the Speakers</h2>
+        <section class="bios grid md:grid-cols-3 gap-4">
+
+            <div class="card speaker-card rounded-lg overflow-hidden border border-gray-200 bg-zest-100">
+                <div class="speaker-info">
+                <Image src={photoKlug} alt="Portrait of Dawn Marie Klug" class="speaker-photo" />
+                <div class="pt-2 px-3">
+                    <h4 class="font-bold mt-2 mb-2">
+                        <span class="speaker-name text-xl">Dawn Marie Klug</span>
+                        <span class="">M.S., LCMHC, CEAP</span>
+                    </h4>
+                    <div class="text-sm">
+                        <p>President and Chief Operating Officer,<br> Employee Assistance Network</p>
+                        <p class="mt-2">Class A Trustee, Alcoholics Anonymous</p>
+                        <p class="mt-2">Chair, Trustees’ Committee on Cooperation with the Professionals / Treatment and Accessibilities</p>        
+                    </div>
+                </div>
+                </div>
+                <hr class="my-4 border-zest-400">
+                <div class="text-sm pb-3 px-3 rounded-lg">
+                    <p class="mt-2">Dawn Marie is the Chief Operating Officer and President of EAN. She holds a Master’s in Mental Health Counseling from Nova Southeastern University. She is a Certified Employee Assistance Professional and is a Licensed Clinical Mental Health Counselor in NC.  She provides the leadership and vision for EAN’s growth and focus on supporting the client organizations and individuals we serve.</p>
+                    <p class="mt-2">In the past 25+ years of working in the Employee Assistance Program field, Dawn Marie has provided account-management services, training, consultation, assessment, referral, coaching and brief counseling services. She has experience in inpatient and outpatient substance abuse counseling as well as group, individual, and couples counseling.  She has expertise in working with clients to develop leadership skills, change management, critical incident stress management, and diversity and inclusion in the workplace.   She has been trained in Accelerated Resolution Therapy, Racial Equity Institute and Critical Incident Stress Management and has experience in responding to workplace trauma.</p>
+                    <p class="mt-2">Dawn Marie’s leadership at EAN also brings a strong community minded focus and she has been engaged in supporting our wider community for decades.  She has served on the boards of Building Bridges of Asheville, On Track Financial Education and Counseling WNC, and is currently on the Board of the Asheville Humane Society and is a Class A Trustee on the General Service Board of Alcoholics Anonymous.  Dawn has also served on the Board of Directors of the International Employee Assistance Professionals Association and the NC Chapter of EAPA.  NC EAPA has honored her with both the NC EAPA Member of the Year Award in 2005 and the John Burke President’s Achievement Award in 2018.</p>
+                </div>
+            </div>    
+            
+            <div class="card speaker-card rounded-lg overflow-hidden border border-gray-200 bg-zest-100">
+                <div class="speaker-info">
+                    <Image src={photoBarthwell} alt="Portrait of Andrea G. Barthwell" class="speaker-photo" />
+                    <div class="pt-2 px-3">
+                        <h4 class="font-bold mt-2 mb-2">
+                            <span class="text-xl speaker-name">Andrea G. Barthwell</span>
+                            <span class="">MD, DFASAM</span>
+                        </h4>
+                        <div class="text-sm">
+                            <p>President and Founder, Encounter Medical Group, PC</p>
+                            <p class="mt-2">Board Chair, Global Recovery Initiatives Foundation & National Recovery Friendly Workplace Institute</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4 border-zest-400">
+                <div class="text-sm pb-3 px-3 rounded-lg">
+                    <p class="mt-2">Andrea G. Barthwell, M.D., D.F.A.S.A.M., is the Founder and President of Encounter Medical Group, P.C., and serves as Board Chair for the Global Recovery Initiatives Foundation (GRI) and the National Recovery Friendly Workplace (RFW). Reflecting her long-term commitment to individuals with Opioid Use Disorder (OUD), she was named as the founding Chair of the Board of the Foundation for Opioid Response Effort (FORE) with a $100 million endowment.</p>
+                    <p class="mt-2">Dr. Barthwell served as Deputy Director for Demand Reduction in the Office of National Drug Control Policy (ONDCP) under President George W. Bush from 2002 to 2004. As a member of the President's sub-cabinet, Dr. Barthwell was a principal advisor on policies aimed at reducing the demand for illicit drugs.</p>
+                    <p class="mt-2">Dr. Barthwell’s current work is focused on developing strategies to expand access to treatment for opioid dependence disorder, expanding practitioner knowledge of urine drug testing in the identification and treatment of substance use disorders, and helping individuals and families prevent substance use disorders.</p>
+                    <p class="mt-2">Dr. Barthwell received a Bachelor of Arts degree in Psychology from Wesleyan University and a Doctorate of Medicine from the University of Michigan Medical School. Following post-graduate training at the University of Chicago and Northwestern University Medical Center, she began her practice in the Chicago area. She was a founding member of the Chicago Area AIDS Task Force, hosted a weekly local cable show on AIDS, and was president of the American Society of Addiction Medicine (ASAM).</p>
+                    <p class="mt-2">In 2003, Dr. Barthwell received the Betty Ford Award from the Association for Medical Education and Research in Substance Abuse. In 1997, Dr. Barthwell's peers named her one of the "Best Doctors in America" in addiction medicine.</p>
+                </div>
+            </div>
+
+            <div class="card speaker-card rounded-lg overflow-hidden border border-gray-200 bg-zest-100">
+                <div class="speaker-info">
+                <Image src={photoChow} alt="Portrait of Matthew C. Chow" class="speaker-photo" />
+                <div class="pt-2 px-3">
+                    <h4 class="font-bold mt-2 mb-2">
+                        <span class="text-xl speaker-name">Dr. Matthew C. Chow</span>
+                        <span class="block">MD, FRCPC</span>
+                    </h4>
+                    <div class="text-sm">
+                        <p>Chief Mental Health Officer, TELUS Health</p>
+                    </div>
+                </div>
+                </div>
+                <hr class="my-4 border-zest-400">
+                <div class="text-sm pb-3 px-3 rounded-lg">
+                    <p class="mt-2">Dr. Matthew Chow is a physician, business leader, and architect of the future of work.</p>
+                    <p class="mt-2">At TELUS Health, Dr. Chow shapes a comprehensive wellbeing platform that supports more than 150 million working people and families. He guides the largest and most complex organizations in the world to adapt and thrive in an AI-enabled yet human-centred future.</p>
+                    <p class="mt-2">As a physician-executive and former President of Doctors of BC, Dr. Chow has led through crisis, stewarded large-scale change, and overseen a multibillion-dollar medical services budget. Today, he focuses on building the architecture, governance, and mindset that enable organizations to adapt, innovate, and thrive in a rapidly evolving landscape.</p>
+                    <p class="mt-2">Dr. Chow’s clinical foundation in emergency psychiatry, acute crisis care, and pediatric mental health inform his approach to futurism: technology must work alongside people in systems that are complex, imperfect, and deeply human. This grounding enables him to bring compassion, integrity, and sound judgment to the transformation of workplaces, workforce wellbeing, and shaping AI-driven change.</p>
+                    <p class="mt-2">Beyond TELUS Health, Dr. Chow contributes to the broader ecosystem through advisory and nonprofit leadership roles, including work with the UBC Institute of Mental Health and “Substance: Learn About It, Talk About It”. These roles keep him connected to community realities, emerging research, and the lived experiences of people navigating health and social systems.</p>
+                    <p class="mt-2">Dr. Chow is building our AI-enabled yet human-centred future alongside unique leaders who can integrate across domains: clinical and personal, local and global, business and public interest, humans and technology.</p>
+                </div>
+            </div>
+
+        </section>
+    </article>
+    <Footer/>
+</Layout>
+
+<style>
+    .speaker-card {
+        container-type: inline-size;
+    }
+
+    .speaker-info {
+
+        /* condensed (stacked) rules go here */
         display: flex;
         flex-direction: column;
-    } */
-        </style>
-    </main>
-</Layout>
+        .speaker-name  {
+            display: block;
+        }
+
+        /* spread-out rules go here */
+        @container (min-width: 48ch) {
+            flex-direction: row;
+            .speaker-photo {
+                width: 33%;
+            }
+                        
+            
+        }
+    }
+
+    hr {
+        @container (min-width: 48ch) {
+            display: none;
+        }
+
+    }
+</style>        

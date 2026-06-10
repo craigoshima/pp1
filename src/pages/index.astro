@@ -1,34 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Nav from "../components/Nav.astro"
+import Footer from "../components/Footer.astro"
+
 import ForumEventCard from "../components/ForumEventCard.astro"
 import SectionColumned from "../components/SectionColumned.astro"
-import LocaleSwitcher from "../components/LocaleSwitcher.astro"
 ---
 
 <Layout>
-    <header class="hero">
-        <div class="mx-auto max-w-[1024px]">
-            <SectionColumned>
-                <div>
-                    <img
-                        src="/images/pps-logo.svg"
-                        alt="Professionals Platform Series"
-                        style="height:168px"
-                    />
-                    <p class="p-4 text-xl italic">
-                        A forum convening professionals and A.A. across the
-                        United States and Canada to strengthen support for
-                        individuals with Alcohol Use Disorder. The platform will
-                        feature a series of conversations across sectors,
-                        beginning in July 2026.
-                    </p>
-                </div>
-                <div class="p-3 text-right">
-                    <LocaleSwitcher />
-                </div>
-            </SectionColumned>
+    <header class="header">
+        <div class="mx-auto max-w-[1024px] flex">
+            <div class="w-full px-3 py-1">    
+                <img
+                    src="/images/pps-logo.svg"
+                    alt="Professionals Platform Series"
+                    style="height:168px"
+                />
+                <p class="p-4 text-xl italic">
+                    A forum convening professionals and A.A. across the
+                    United States and Canada to strengthen support for
+                    individuals with Alcohol Use Disorder. The platform will
+                    feature a series of conversations across sectors,
+                    beginning in July 2026.
+                </p>                
+            </div>
+            <div class="relative text-right mr-4">
+                <Nav />
+            </div>
         </div>
     </header>
+
     <main class="mx-auto max-w-[1024px]">
         <SectionColumned>
             <div>
@@ -36,16 +37,14 @@ import LocaleSwitcher from "../components/LocaleSwitcher.astro"
                     <ForumEventCard>
                         <div slot="dateinfo">
                             <p>Thursday</p>
-                            <p class="text-xl">
+                            <a href="/session" class="text-xl block">
                                 <strong>23 July 2026</strong>
-                            </p>
+                            </a>
                         </div>
-                        <main class="px-2 py-4">
+                        <main class="text-center px-2 py-4">
                             <h3 class="text-2xl">
-                                <strong
-                                    ><span href="session">Dawn Klug</span><br
-                                    /><small>M.S., LCMHC, CEAP</small></strong
-                                >
+                                    <strong>Dawn Klug</strong>
+                                    <small class="font-bold block">M.S., LCMHC, CEAP</small>
                             </h3>
                             <p>
                                 President and Chief Operating Officer<br />
@@ -64,9 +63,9 @@ import LocaleSwitcher from "../components/LocaleSwitcher.astro"
                                 <strong>22 October 2026</strong>
                             </p>
                         </div>
-                        <main class="px-2 py-4">
+                        <main class="text-center px-2 py-4">
                             <h3 class="text-2xl">
-                                <strong> Chief Judge<br /> Kerry Meyer</strong>
+                                <strong>Chief Judge<br /> Kerry Meyer</strong>
                             </h3>
                             <p>Minneapolis</p>
                             <p class="mt-4">
@@ -125,34 +124,36 @@ import LocaleSwitcher from "../components/LocaleSwitcher.astro"
                     <p>
                         <a
                             href="https://www.aa.org/Cooperation-with-the-Professional-Community"
-                            target="_blank"
-                            class="text-cyan-700"
-                            >Cooperation with the Professional Community (CPC)
+                            target="_blank" class="link">
+                            Cooperation with the Professional Community (CPC)
                         </a>
                     </p>
                     <p class="mt-4">
                         <a
                             href="https://www.aa.org/public-information-committees"
-                            target="_blank">Public Information Committees</a
-                        >
+                            target="_blank" class="link">
+                            Public Information Committees
+                        </a>
                     </p>
                 </div>
 
-                <div class="pb-4">
+                <!-- <div class="pb-4">
                     <h3 class="text-lg font-bold">About</h3>
                     <p>
                         <a href="about" class="text-cyan-700">About Us</a> |
-                        <a href="mailto:info@professionalsplatform.org"
-                            >Contact Us</a
-                        >
+                        <a href="mailto:info@professionalsplatform.org">
+                            Contact Us
+                        </a>
                     </p>
-                </div>
+                </div> -->
             </div>
         </SectionColumned>
     </main>
+ 
+    <Footer/>
 
     <style>
-        .hero {
+        .header {
             background:
                 linear-gradient(
                     92deg,

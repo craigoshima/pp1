@@ -1,32 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
 import ForumEventCard from "../components/ForumEventCard.astro"
 import SectionColumned from "../components/SectionColumned.astro"
-import LocaleSwitcher from "../components/LocaleSwitcher.astro"
+
 ---
 
 <Layout>
-    <header class="hero">
-        <div class="mx-auto max-w-[1024px]">
-            <SectionColumned>
-                <div>
-                    <a href="/">
-                        <img
-                            src="/images/pps-logo.svg"
-                            alt="Professionals Platform Series"
-                            style="height:96px"
-                        />
-                    </a>
-                </div>
-                <div class="p-3 text-right">
-                    <LocaleSwitcher />
-                </div>
-            </SectionColumned>
-        </div>
-    </header>
+    <Header/>
+
     <main class="mx-auto max-w-[1024px]">
         <SectionColumned>
-            <div class="pp-prose pl-3">
+            <article class="prose pl-3">
                 <h1 class="">About Us</h1>
                 <div class="mt-0 text-xl">
                     <em> Supporting Professionals. Strengthening Recovery.</em>
@@ -47,7 +33,7 @@ import LocaleSwitcher from "../components/LocaleSwitcher.astro"
                     We recognize the critical role of professionals across
                     systems and settings, including:
                 </p>
-                <ul class="mr-16">
+                <ul class="mr-16 ">
                     <li class="mt-3">
                         <strong>Workplace & Organizational Leaders</strong> — human
                         resources professionals, Employee Assistance Program (EAP)
@@ -76,13 +62,16 @@ import LocaleSwitcher from "../components/LocaleSwitcher.astro"
                     practical approaches that support professionals on the front
                     lines of recovery.
                 </p>
-                <p class="mt-4 mr-2"><a href="/">Back to home</a></p>
-            </div>
-            <div class="flex flex-col rounded-2xl bg-gray-100 px-4 pt-4">
-                <h3 class="text-lg font-bold">A.A. Links</h3>
+            </article>
+
+            <div class="flex flex-col rounded-2xl bg-gradient-to-b from-gray-100 to-gray-050 px-4 pt-4">
+                <h3 class="text-lg font-bold">Contact Us:</h3>
+                <p><a href="mailto:info@professionalsplatform.org" class="link">info@professionalsplatform.org</a></p>
+
+                <h3 class="mt-4 text-lg font-bold">A.A. Links</h3>
                 <p>
                     <a
-                        href="https://www.aa.org/Cooperation-with-the-Professional-Community"
+                        href="https://www.aa.org/Cooperation-with-the-Professional-Community" class="link"
                         target="_blank"
                         >Cooperation with the Professional Community (CPC)
                     </a>
@@ -90,12 +79,14 @@ import LocaleSwitcher from "../components/LocaleSwitcher.astro"
                 <p class="mt-4">
                     <a
                         href="https://www.aa.org/public-information-committees"
+                         class="link"
                         target="_blank">Public Information Committees</a
                     >
                 </p>
             </div>
         </SectionColumned>
     </main>
+    <Footer/>
 
     <style>
         .hero {
@@ -109,11 +100,5 @@ import LocaleSwitcher from "../components/LocaleSwitcher.astro"
                 url("/images/mono-chairs-1600.jpg") lightgray 50% / cover
                     no-repeat;
         }
-
-        /* main {
-        background: var(--color-powderblue-100);
-        display: flex;
-        flex-direction: column;
-    } */
     </style>
 </Layout>

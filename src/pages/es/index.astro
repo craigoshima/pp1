@@ -1,38 +1,39 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import Nav from "../../components/es/Nav.astro"
+import Footer from "../../components/es/Footer.astro"
 import ForumEventCard from "../../components/ForumEventCard.astro"
 import SectionColumned from "../../components/SectionColumned.astro"
-import LocaleSwitcher from "../../components/es/LocaleSwitcher.astro"
 ---
 
 <Layout>
-    <header class="hero">
-        <div class="mx-auto max-w-[1024px]">
-            <SectionColumned>
-                <div>
-                    <img
-                        src="/images/pps-logo.svg"
-                        alt="Serie de plataformas para profesionales"
-                        style="height:168px"
-                    />
-                    <div class="px-4 text-lg font-bold">
-                        Serie de plataformas para profesionales
-                    </div>
-                    <p class="p-4 pt-2 text-xl italic">
-                        Un foro intersectorial que reúne a profesionales y
-                        miembros de Alcohólicos Anónimos de todo Estados Unidos
-                        y Canadá para fortalecer el apoyo a las personas con
-                        trastorno por consumo de alcohol. La plataforma ofrecerá
-                        una serie de conversaciones que comenzarán en julio de
-                        2026.
-                    </p>
+
+    <header class="header">
+        <div class="mx-auto max-w-[1024px] flex">
+            <div class="w-full px-3 py-1">    
+                <img
+                    src="/images/pps-logo.svg"
+                    alt="Serie de plataformas para profesionales"
+                    style="height:168px"
+                />
+                <div class="px-4 text-lg font-bold">
+                    Serie de plataformas para profesionales
                 </div>
-                <div class="p-3 text-right">
-                    <LocaleSwitcher />
-                </div>
-            </SectionColumned>
+                <p class="p-4 text-xl italic">
+                    Un foro intersectorial que reúne a profesionales y
+                    miembros de Alcohólicos Anónimos de todo Estados Unidos
+                    y Canadá para fortalecer el apoyo a las personas con
+                    trastorno por consumo de alcohol. La plataforma ofrecerá
+                    una serie de conversaciones que comenzarán en julio de
+                    2026.
+                </p>                
+            </div>
+            <div class="relative text-right mr-4">
+                <Nav />
+            </div>
         </div>
     </header>
+    
     <main class="mx-auto max-w-[1024px]">
         <SectionColumned>
             <div>
@@ -40,18 +41,16 @@ import LocaleSwitcher from "../../components/es/LocaleSwitcher.astro"
                     <ForumEventCard>
                         <div slot="dateinfo">
                             <p>Jueves</p>
-                            <p class="text-xl">
+                            <a href="/es/session" class="text-xl">
                                 <strong>23 de julio de 2026</strong>
-                            </p>
+                            </a>
                         </div>
-                        <main class="px-2 py-4">
+                        <main class="text-center px-2 py-4">
                             <h3 class="text-2xl">
-                                <strong
-                                    >Dawn Klug<br /><small
-                                        >M.S., LCMHC, CEAP</small
-                                    ></strong
-                                >
+                                <strong>Dawn Klug</strong>
+                                <small class="font-bold block">M.S., LCMHC, CEAP</small>
                             </h3>
+
                             <p>
                                 Presidenta y Directora de Operaciones de la Red
                                 de Asistencia al Empleado
@@ -70,7 +69,7 @@ import LocaleSwitcher from "../../components/es/LocaleSwitcher.astro"
                                 <strong>22 de octubre de 2026</strong>
                             </p>
                         </div>
-                        <main class="px-2 py-4">
+                        <main class="text-center px-2 py-4">
                             <h3 class="text-2xl">
                                 <strong> Chief Judge<br /> Kerry Meyer</strong>
                             </h3>
@@ -139,7 +138,7 @@ import LocaleSwitcher from "../../components/es/LocaleSwitcher.astro"
                         <a
                             href="https://www.aa.org/es/Cooperation-with-the-Professional-Community"
                             target="_blank"
-                            class="text-cyan-700"
+                            class="link"
                             >Cooperación con la Comunidad Profesional (CCP)
                         </a>
                     </p>
@@ -147,13 +146,13 @@ import LocaleSwitcher from "../../components/es/LocaleSwitcher.astro"
                         <a
                             href="https://www.aa.org/es/public-information-committees"
                             target="_blank"
-                            class="text-cyan-700"
+                            class="link"
                             >Comités de Información Pública</a
                         >
                     </p>
                 </div>
 
-                <div class="pb-4">
+                <!-- <div class="pb-4">
                     <h3 class="text-lg font-bold">Sobre nosotros</h3>
                     <p>
                         <a href="about" class="text-cyan-700">Sobre nosotros</a> |
@@ -161,13 +160,14 @@ import LocaleSwitcher from "../../components/es/LocaleSwitcher.astro"
                             >Contáctanos</a
                         >
                     </p>
-                </div>
+                </div> -->
             </div>
         </SectionColumned>
     </main>
+    <Footer/>
 
     <style>
-        .hero {
+        .header {
             background:
                 linear-gradient(
                     92deg,

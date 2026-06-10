@@ -3,19 +3,19 @@
         style="top:-24px"
     >
  -->
-<div class="flex w-full flex-col gap-4">
+<div class="card flex w-full flex-col gap-4 rounded-2xl">
     <div
-        class="bg-powderblue-100 relative h-full w-full rounded-2xl text-center"
+        class="bg-powderblue-100 relative h-full w-fulltext-center"
     >
         <header
-            class="bg-zest-400 relative rounded-2xl rounded-b-none px-4 py-2 text-center"
+            class="bg-zest-400 px-4 py-2 text-center"
         >
             <slot name="dateinfo">
                 <p>DAY</p>
                 <p>DATE</p>
             </slot>
         </header>
-        <slot class="px-4 pb-4 text-center">
+        <slot>
             <main>
                 <h1>NAME</h1>
                 <h2>TITLE</h2>
@@ -24,3 +24,30 @@
         </slot>
     </div>
 </div>
+<style>
+.card {
+    position: relative;
+    overflow: hidden;
+
+    a {
+        ;
+    }
+    a::after {
+        content: "";
+        position: absolute;
+        inset-block: 0;
+        inset-inline: 0;
+        cursor: pointer;
+    }
+}
+
+.card:has(a) {
+    box-shadow: var(--shadow-md);
+}
+.card:has(a):hover,
+.card:has(a:focus) {
+    outline: 1px solid var(--color-powderblue-500);
+    box-shadow: var(--shadow-lg);
+}
+</style>
+

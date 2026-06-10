@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css"
+import LocaleSwitcher from "../components/LocaleSwitcher.astro"
+
+const { title, description } = Astro.props
+
 // <link rel="preconnect" href="https://fonts.googleapis.com" />
 // <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 // <link rel="icon" href="data:image/png;base64,iVBORw0KGgo=" />
@@ -20,22 +24,5 @@ import "../styles/global.css"
     </head>
     <body>
         <slot />
-        <footer
-            class="text-gray-7 mt-8 border-t border-gray-200 p-4 text-center text-sm text-gray-500"
-        >
-            ©2026 professionalsplatform.org
-        </footer>
     </body>
 </html>
-
-<style>
-    html,
-    body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-
-        font-family: var(--font-display);
-        color: var(--color-gray-900);
-    }
-</style>

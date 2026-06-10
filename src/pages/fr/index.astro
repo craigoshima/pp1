@@ -1,33 +1,33 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import Nav from "../../components/fr/Nav.astro"
+import Footer from "../../components/fr/Footer.astro"
+
 import ForumEventCard from "../../components/ForumEventCard.astro"
 import SectionColumned from "../../components/SectionColumned.astro"
 import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
 ---
 
 <Layout>
-    <header class="hero">
-        <div class="mx-auto max-w-[1024px]">
-            <SectionColumned>
-                <div>
-                    <img
-                        src="/images/pps-logo.svg"
-                        alt="Professionals Platform Series"
-                        style="height:168px"
-                    />
-
-                    <p class="p-4 pt-2 text-xl italic">
-                        Forum intersectoriel réunissant des professionnels et
-                        les A.A. à travers les États-Unis et le Canada afin de
-                        renforcer le soutien aux personnes ayant des problèmes
-                        liés à l’usage de l’alcool. La plateforme proposera une
-                        série de conversations, débutant en juillet 2026.
-                    </p>
-                </div>
-                <div class="p-3 text-right">
-                    <LocaleSwitcher />
-                </div>
-            </SectionColumned>
+    <header class="header">
+        <div class="mx-auto max-w-[1024px] flex">
+            <div class="w-full px-3 py-1">    
+                <img
+                    src="/images/pps-logo.svg"
+                    alt="Professionals Platform Series"
+                    style="height:168px"
+                />
+                <p class="p-4 text-xl italic">
+                    Forum intersectoriel réunissant des professionnels et
+                    les A.A. à travers les États-Unis et le Canada afin de
+                    renforcer le soutien aux personnes ayant des problèmes
+                    liés à l’usage de l’alcool. La plateforme proposera une
+                    série de conversations, débutant en juillet 2026.
+                </p>                
+            </div>
+            <div class="relative text-right mr-4">
+                <Nav />
+            </div>
         </div>
     </header>
 
@@ -38,17 +38,14 @@ import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
                     <ForumEventCard>
                         <div slot="dateinfo">
                             <p>Jeudi</p>
-                            <p class="text-xl">
+                            <a href="/fr/session" class="text-xl">
                                 <strong>23 Juillet 2026</strong>
-                            </p>
+                            </a>
                         </div>
-                        <main class="px-2 py-4">
+                        <main class="text-center px-2 py-4">
                             <h3 class="text-2xl">
-                                <strong
-                                    >Dawn Klug<br /><small
-                                        >M.S., LCMHC, CEAP</small
-                                    ></strong
-                                >
+                                <strong>Dawn Klug</strong>
+                                <small class="font-bold block">M.S., LCMHC, CEAP</small>
                             </h3>
                             <p>
                                 Présidente et chef de l'exploitation, réseau
@@ -65,7 +62,7 @@ import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
                                 <strong>22 Octobre 2026</strong>
                             </p>
                         </div>
-                        <main class="px-2 py-4">
+                        <main class="text-center px-2 py-4">
                             <h3 class="text-2xl">
                                 <strong> Chief Judge<br /> Kerry Meyer</strong>
                             </h3>
@@ -129,7 +126,7 @@ import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
                         <a
                             href="https://www.aa.org/fr/Cooperation-with-the-Professional-Community"
                             target="_blank"
-                            class="text-cyan-700"
+                            class="link"
                             >Collaboration avec les Milieux professionnels (CMP)
                         </a>
                     </p>
@@ -137,13 +134,13 @@ import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
                         <a
                             href="https://www.aa.org/fr/public-information-committees"
                             target="_blank"
-                            class="text-cyan-700"
+                            class="link"
                             >Comités de l’Information publique</a
                         >
                     </p>
                 </div>
 
-                <div class="pb-4">
+                <!-- <div class="pb-4">
                     <h3 class="text-lg font-bold">À propos</h3>
                     <p>
                         <a href="about" class="text-cyan-700">À propos</a> |
@@ -151,13 +148,14 @@ import LocaleSwitcher from "../../components/fr/LocaleSwitcher.astro"
                             >Nous contacter</a
                         >
                     </p>
-                </div>
+                </div> -->
             </div>
         </SectionColumned>
     </main>
+    <Footer/>
 
     <style>
-        .hero {
+        .header {
             background:
                 linear-gradient(
                     92deg,
