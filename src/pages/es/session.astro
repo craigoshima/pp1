@@ -3,16 +3,14 @@ import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/es/Header.astro"
 import Footer from "../../components/es/Footer.astro"
 
-
-import { Image } from 'astro:assets';
-import photoKlug from "../../assets/speakers/portrait-klug-dawn-marie-2026-07.jpg";
-import photoBarthwell from "../../assets/speakers/portrait-barthwell-andrea-g-2026-07.jpg"; 
-import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg"; 
-
+import { Image } from "astro:assets"
+import photoKlug from "../../assets/speakers/portrait-klug-dawn-marie-2026-07.jpg"
+import photoBarthwell from "../../assets/speakers/portrait-barthwell-andrea-g-2026-07.jpg"
+import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg"
 ---
 
 <Layout>
-    <Header/>
+    <Header />
     <article class="mx-auto max-w-[1024px] p-4">
         <div class="mb-4">
             <p>
@@ -20,24 +18,43 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
                 <span class="text-gray-400">&gt; </span> -->
                 <span>Jueves 23 de julio de 2026</span>
             </p>
-            <h1 class="text-2xl">¿Cómo es un lugar de trabajo que favorece la recuperación?</h1>
+            <h1 class="text-2xl">
+                ¿Cómo es un lugar de trabajo que favorece la recuperación?
+            </h1>
         </div>
 
         <div class="grid grid-cols-3 gap-4">
-            <div class="col-span-2 prose border-gray-300 py-2 rounded-lg">
-                <p>Únase a profesionales de programas de asistencia al empleado (PAE), médicos y líderes corporativos para exploran formas prácticas de apoyar a los empleados afectados por el trastorno por consumo de alcohol (TCA) y construir lugares de trabajo resilientes y centrados en las personas, a medida que la Inteligencia Artificial transforma nuestra forma de trabajar y recuperarnos.</p>
+            <div class="prose col-span-2 rounded-lg border-gray-300 py-2">
+                <p>
+                    Únase a profesionales de programas de asistencia al empleado
+                    (PAE), médicos y líderes corporativos para exploran formas
+                    prácticas de apoyar a los empleados afectados por el
+                    trastorno por consumo de alcohol (TCA) y construir lugares
+                    de trabajo resilientes y centrados en las personas, a medida
+                    que la Inteligencia Artificial transforma nuestra forma de
+                    trabajar y recuperarnos.
+                </p>
                 <p class="">¿Quiénes deberían asistir?</p>
                 <ul>
-
-                    <li>Profesionales de recursos humanos, personal, bienestar y beneficios</li>
-                    <li>Programa de Asistencia al Empleado (PAE) y profesionales del lugar de trabajo</li>
+                    <li>
+                        Profesionales de recursos humanos, personal, bienestar y
+                        beneficios
+                    </li>
+                    <li>
+                        Programa de Asistencia al Empleado (PAE) y profesionales
+                        del lugar de trabajo
+                    </li>
                     <li>Proveedores de atención médica y de salud mental</li>
                     <li>Líderes de recuperación y de la comunidad</li>
-                    <li>Cualquier persona interesada en crear entornos laborales que favorezcan la recuperación</li>
+                    <li>
+                        Cualquier persona interesada en crear entornos laborales
+                        que favorezcan la recuperación
+                    </li>
                 </ul>
             </div>
 
-            <div class="bg-gradient-to-b from-powderblue-100 to-powderblue-050 col-span-1 rounded-lg px-4 py-2">
+            <div
+                class="from-powderblue-100 to-powderblue-050 col-span-1 rounded-lg bg-gradient-to-b px-4 py-2">
                 <div>
                     <strong>Jueves 23 de julio de 2026</strong>
                     <ul class="mt-1">
@@ -48,96 +65,265 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
                 </div>
                 <div class="mt-4">
                     <strong>Acceso virtual (Zoom)</strong>
-                    <div class="mt-1 xgrid grid-cols-[100px_1fr] ">
+                    <div class="xgrid mt-1 grid-cols-[100px_1fr]">
                         <p class="fit-content">ID de la reunión:</p>
                         <p>867 7265 7920</p>
-                        <p class="mt-2">Código de acceso:</p> 
+                        <p class="mt-2">Código de acceso:</p>
                         <p>853223</p>
                     </div>
-                
                 </div>
-                <div class="mt-4">Servicio de interpretación disponible en español y francés.</div>
+                <div class="mt-4">
+                    Servicio de interpretación disponible en español y francés.
+                </div>
             </div>
         </div>
 
-
-        <h2 class="text-2xl font-bold my-4">Acerca de los ponentes</h2>
-        <section class="bios grid md:grid-cols-3 gap-4">
-
-            <div class="card speaker-card rounded-lg overflow-hidden border border-gray-200 bg-zest-100">
+        <h2 class="my-4 text-2xl font-bold">Acerca de los ponentes</h2>
+        <section class="bios grid gap-4 md:grid-cols-3">
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
                 <div class="speaker-info">
-                <Image src={photoKlug} alt="Portrait of Dawn Marie Klug" class="speaker-photo" />
-                <div class="pt-2 px-3">
-                    <h4 class="font-bold mt-2 mb-2">
-                        <span class="speaker-name text-xl">Dawn Marie Klug</span>
-                        <span class="">M.S., LCMHC, CEAP</span>
-                    </h4>
-                    <div class="text-sm">
-                        <p>Presidente y Director de Operaciones de la Red de Asistencia al Empleado</p>
-                        <p class="mt-2">Miembro del consejo directivo de clase A de Alcohólicos Anónimos </p>
-                        <p class="mt-2">Coordinadora del Comité de Patronato sobre Cooperación con los Profesionales / Tratamiento y Accesibilidad</p>
-                    </div>
-                </div>
-                </div>
-                <hr class="my-4 border-zest-400">
-                <div class="text-sm pb-3 px-3 rounded-lg">
-                    <p class="mt-2">Dawn Marie es la Directora de Operaciones y Presidenta de EAN. Posee una Maestría en Consejería de Salud Mental de la Universidad Nova Southeastern. Es Profesional Certificada en Asistencia al Empleado y Consejera Clínica de Salud Mental con licencia en Carolina del Norte. Proporciona el liderazgo y la visión para el crecimiento de EAN y se centra en apoyar a las organizaciones y personas clientes a las que servimos. </p>
-                    <p class="mt-2">En sus más de 25 años de experiencia en el campo de los Programas de Asistencia al Empleado, Dawn Marie ha brindado servicios de gestión de cuentas, capacitación, consultoría, evaluación, derivación, coaching y asesoramiento breve. Tiene experiencia en consejería para el abuso de sustancias, tanto para pacientes hospitalizados como ambulatorios, así como en terapia grupal, individual y de pareja. Posee experiencia en el desarrollo de habilidades de liderazgo, gestión del cambio, manejo del estrés por incidentes críticos y diversidad e inclusión en el lugar de trabajo. Ha recibido capacitación en Terapia de Resolución Acelerada, el Instituto de Equidad Racial y Gestión del Estrés por Incidentes Críticos, y tiene experiencia en la respuesta a traumas laborales. </p>
-                    <p class="mt-2">El liderazgo de Dawn Marie en EAN también se caracteriza por un fuerte enfoque comunitario, y lleva décadas apoyando a nuestra comunidad. Ha formado parte de las juntas directivas de Building Bridges of Asheville, On Track Financial Education and Counseling WNC, y actualmente es miembro de la junta directiva de la Asheville Humane Society y fideicomisaria de Clase A en la Junta de Servicios Generales de Alcohólicos Anónimos. Dawn también ha formado parte de la junta directiva de la International Employee Assistance Professionals Association y del capítulo de Carolina del Norte de EAPA. NC EAPA la ha honrado con el premio al Miembro del Año de NC EAPA en 2005 y el Premio John Burke al Logro Presidencial en 2018.</p>
-                </div>
-            </div>    
-            
-            <div class="card speaker-card rounded-lg overflow-hidden border border-gray-200 bg-zest-100">
-                <div class="speaker-info">
-                    <Image src={photoBarthwell} alt="Portrait of Andrea G. Barthwell" class="speaker-photo" />
-                    <div class="pt-2 px-3">
-                        <h4 class="font-bold mt-2 mb-2">
-                            <span class="text-xl speaker-name">Andrea G. Barthwell</span>
-                            <span class="">MD, DFASAM</span>
+                    <Image
+                        src={photoKlug}
+                        alt="Portrait of Dawn Marie Klug"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Dawn Marie Klug
+                            </span>
+                            <span class="">M.S., LCMHC, CEAP</span>
                         </h4>
                         <div class="text-sm">
-                            <p>Presidente y fundador de Encounter Medical Group, PC</p>
-                            <p class="mt-2">Presidente del Consejo Directivo de la Fundación Iniciativas de Recuperación Global y del Instituto Nacional de Lugares de Trabajo Amigables con la Recuperación</p>
+                            <p>
+                                Presidente y Director de Operaciones de la Red
+                                de Asistencia al Empleado
+                            </p>
+                            <p class="mt-2">
+                                Custodio Clase A, Junta de Servicios Generales
+                                de Alcohólicos Anónimos
+                            </p>
+                            <p class="mt-2">
+                                Coordinadora del Comité de Patronato sobre
+                                Cooperación con los Profesionales / Tratamiento
+                                y Accesibilidad
+                            </p>
                         </div>
                     </div>
                 </div>
-                <hr class="my-4 border-zest-400">
-                <div class="text-sm pb-3 px-3 rounded-lg">
-                    <p class="mt-2">Andrea G. Barthwell, M.D., D.F.A.S.A.M., es la fundadora y presidenta de Encounter Medical Group, P.C., y preside la junta directiva de la Global Recovery Initiatives Foundation (GRI) y del National Recovery Friendly Workplace (RFW). Reflejo de su compromiso a largo plazo con las personas con trastorno por consumo de opioides (OUD), fue nombrada presidenta fundadora de la junta directiva de la Foundation for Opioid Response Effort (FORE), que cuenta con una dotación de 100 millones de dólares.</p>
-                    <p class="mt-2">La Dra. Barthwell se desempeñó como Subdirector de Reducción de la Demanda en la Oficina de Política Nacional de Control de Drogas (ONDCP) bajo la presidencia de George W. Bush, de 2002 a 2004. Como miembro del gabinete del Presidente, el Dr. Barthwell fue un asesor principal en políticas destinadas a reducir la demanda de drogas ilícitas.</p>
-                    <p class="mt-2">El trabajo actual de La Dra. Barthwell se centra en desarrollar estrategias para ampliar el acceso de tratamiento para el trastorno de dependencia de opioides, ampliar el conocimiento de los profesionales sobre las pruebas de detección de drogas de orin para la identificación y el tratamiento de los trastornos por consumo de sustancias, y ayudar a las personas y las familias a prevenir dichos trastornos.</p>
-                    <p class="mt-2">La Dra. Barthwell se licenció en Psicología por la Universidad de Wesleyan y obtuvo su doctorado en Medicina por la Facultad de Medicina de la Universidad de Michigan. Tras realizar estudios de posgrado en la Universidad de Chicago y en el Centro Médico de la Universidad Northwestern, comenzó a ejercer su profesión en el área de Chicago. Fue miembro fundadora del Grupo de Trabajo sobre el SIDA del Área de Chicago, presentó un programa semanal sobre el SIDA en la televisión local por cable y fue presidenta de la Sociedad Estadounidense de Medicina de las Adicciones (ASAM).</p>
-                    <p class="mt-2">En 2003, la Dra. Barthwell recibió el Premio Betty Ford de la Asociación para la Educación e Investigación Médica en Abuso de Sustancias. En 1997, sus colegas la nombraron una de las "Mejores Doctoras de Estados Unidos" en medicina de adicciones.</p>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Dawn Marie es la Directora de Operaciones y Presidenta
+                        de EAN. Posee una Maestría en Consejería de Salud Mental
+                        de la Universidad Nova Southeastern. Es Profesional
+                        Certificada en Asistencia al Empleado y Consejera
+                        Clínica de Salud Mental con licencia en Carolina del
+                        Norte. Proporciona el liderazgo y la visión para el
+                        crecimiento de EAN y se centra en apoyar a las
+                        organizaciones y personas clientes a las que servimos.
+                    </p>
+                    <p class="mt-2">
+                        En sus más de 25 años de experiencia en el campo de los
+                        Programas de Asistencia al Empleado, Dawn Marie ha
+                        brindado servicios de gestión de cuentas, capacitación,
+                        consultoría, evaluación, derivación, coaching y
+                        asesoramiento breve. Tiene experiencia en consejería
+                        para el abuso de sustancias, tanto para pacientes
+                        hospitalizados como ambulatorios, así como en terapia
+                        grupal, individual y de pareja. Posee experiencia en el
+                        desarrollo de habilidades de liderazgo, gestión del
+                        cambio, manejo del estrés por incidentes críticos y
+                        diversidad e inclusión en el lugar de trabajo. Ha
+                        recibido capacitación en Terapia de Resolución
+                        Acelerada, el Instituto de Equidad Racial y Gestión del
+                        Estrés por Incidentes Críticos, y tiene experiencia en
+                        la respuesta a traumas laborales.
+                    </p>
+                    <p class="mt-2">
+                        El liderazgo de Dawn Marie en EAN también se caracteriza
+                        por un fuerte enfoque comunitario, y lleva décadas
+                        apoyando a nuestra comunidad. Ha formado parte de las
+                        juntas directivas de Building Bridges of Asheville, On
+                        Track Financial Education and Counseling WNC, y
+                        actualmente es miembro de la junta directiva de la
+                        Asheville Humane Society y fideicomisaria de Clase A en
+                        la Junta de Servicios Generales de Alcohólicos Anónimos.
+                        Dawn también ha formado parte de la junta directiva de
+                        la International Employee Assistance Professionals
+                        Association y del capítulo de Carolina del Norte de
+                        EAPA. NC EAPA la ha honrado con el premio al Miembro del
+                        Año de NC EAPA en 2005 y el Premio John Burke al Logro
+                        Presidencial en 2018.
+                    </p>
                 </div>
             </div>
 
-            <div class="card speaker-card rounded-lg overflow-hidden border border-gray-200 bg-zest-100">
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
                 <div class="speaker-info">
-                <Image src={photoChow} alt="Portrait of Matthew C. Chow" class="speaker-photo" />
-                <div class="pt-2 px-3">
-                    <h4 class="font-bold mt-2 mb-2">
-                        <span class="text-xl speaker-name">Dr. Matthew C. Chow</span>
-                        <span class="block">MD, FRCPC</span>
-                    </h4>
-                    <div class="text-sm">
-                        <p>Director de Salud Mental, TELUS Health</p>
+                    <Image
+                        src={photoBarthwell}
+                        alt="Portrait of Andrea G. Barthwell"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Andrea G. Barthwell
+                            </span>
+                            <span class="">MD, DFASAM</span>
+                        </h4>
+                        <div class="text-sm">
+                            <p>
+                                Presidente y fundador de Encounter Medical
+                                Group, PC
+                            </p>
+                            <p class="mt-2">
+                                Presidente del Consejo Directivo de la Fundación
+                                Iniciativas de Recuperación Global y del
+                                Instituto Nacional de Lugares de Trabajo
+                                Amigables con la Recuperación
+                            </p>
+                        </div>
                     </div>
                 </div>
-                </div>
-                <hr class="my-4 border-zest-400">
-                <div class="text-sm pb-3 px-3 rounded-lg">
-                    <p class="mt-2">El Dr. Matthew Chow es médico, líder empresarial y arquitecto del futuro del trabajo.</p>
-                    <p class="mt-2">En TELUS Health, el Dr. Chow diseña una plataforma integral de bienestar que beneficia a más de 150 millones de trabajadores y familias. Asesora a las organizaciones más grandes y complejas del mundo para que se adapten y prosperen en un futuro impulsado por la IA, pero centrado en las personas.</p>
-                    <p class="mt-2">Como médico ejecutivo y expresidente de Doctors of BC, el Dr. Chow ha liderado en tiempos de crisis, gestionado cambios a gran escala y supervisado un presupuesto multimillonario para servicios médicos. Actualmente, se centra en desarrollar la estructura, la gobernanza y la mentalidad necesarias para que las organizaciones se adapten, innoven y prosperen en un entorno en constante evolución.</p>
-                    <p class="mt-2">El Fundamento clínico del Dr. Chow en psiquiatría de urgencias, atención de crisis agudas y salud mental pediátrica fundamenta su visión del futuro: la tecnología debe trabajar en conjunto con las personas en sistemas complejos, imperfectos y profundamente humanos. Esta base le permite aportar compasión, integridad y buen juicio a la transformación de los entornos laborales, el bienestar de los empleados y la configuración del cambio impulsado por la IA.</p>
-                    <p class="mt-2">Además de su labor en TELUS Health, el Dr. Chow contribuye al ecosistema en general mediante funciones de asesoría y liderazgo en organizaciones sin fines de lucro, incluyendo su trabajo con el Instituto de Salud Mental de la UBC y el programa "Substance: Learn About It, Talk About It". Estas funciones le permiten mantenerse conectado con la realidad de la comunidad, las investigaciones emergentes y las experiencias vividas por las personas que interactúan con los sistemas de salud y sociales.</p>
-                    <p class="mt-2">El Dr. Chow está construyendo nuestro futuro, impulsado por la IA pero centrado en el ser humano, junto con líderes excepcionales que pueden integrarse en diversos ámbitos: clínico y personal, local y global, empresarial y de interés público, humanos y tecnología.</p>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Andrea G. Barthwell, M.D., D.F.A.S.A.M., es la fundadora
+                        y presidenta de Encounter Medical Group, P.C., y preside
+                        la junta directiva de la Global Recovery Initiatives
+                        Foundation (GRI) y del National Recovery Friendly
+                        Workplace (RFW). Reflejo de su compromiso a largo plazo
+                        con las personas con trastorno por consumo de opioides
+                        (OUD), fue nombrada presidenta fundadora de la junta
+                        directiva de la Foundation for Opioid Response Effort
+                        (FORE), que cuenta con una dotación de 100 millones de
+                        dólares.
+                    </p>
+                    <p class="mt-2">
+                        La Dra. Barthwell se desempeñó como Subdirector de
+                        Reducción de la Demanda en la Oficina de Política
+                        Nacional de Control de Drogas (ONDCP) bajo la
+                        presidencia de George W. Bush, de 2002 a 2004. Como
+                        miembro del gabinete del Presidente, el Dr. Barthwell
+                        fue un asesor principal en políticas destinadas a
+                        reducir la demanda de drogas ilícitas.
+                    </p>
+                    <p class="mt-2">
+                        El trabajo actual de La Dra. Barthwell se centra en
+                        desarrollar estrategias para ampliar el acceso de
+                        tratamiento para el trastorno de dependencia de
+                        opioides, ampliar el conocimiento de los profesionales
+                        sobre las pruebas de detección de drogas de orin para la
+                        identificación y el tratamiento de los trastornos por
+                        consumo de sustancias, y ayudar a las personas y las
+                        familias a prevenir dichos trastornos.
+                    </p>
+                    <p class="mt-2">
+                        La Dra. Barthwell se licenció en Psicología por la
+                        Universidad de Wesleyan y obtuvo su doctorado en
+                        Medicina por la Facultad de Medicina de la Universidad
+                        de Michigan. Tras realizar estudios de posgrado en la
+                        Universidad de Chicago y en el Centro Médico de la
+                        Universidad Northwestern, comenzó a ejercer su profesión
+                        en el área de Chicago. Fue miembro fundadora del Grupo
+                        de Trabajo sobre el SIDA del Área de Chicago, presentó
+                        un programa semanal sobre el SIDA en la televisión local
+                        por cable y fue presidenta de la Sociedad Estadounidense
+                        de Medicina de las Adicciones (ASAM).
+                    </p>
+                    <p class="mt-2">
+                        En 2003, la Dra. Barthwell recibió el Premio Betty Ford
+                        de la Asociación para la Educación e Investigación
+                        Médica en Abuso de Sustancias. En 1997, sus colegas la
+                        nombraron una de las "Mejores Doctoras de Estados
+                        Unidos" en medicina de adicciones.
+                    </p>
                 </div>
             </div>
 
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoChow}
+                        alt="Portrait of Matthew C. Chow"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Dr. Matthew C. Chow
+                            </span>
+                            <span class="block">MD, FRCPC</span>
+                        </h4>
+                        <div class="text-sm">
+                            <p>Director de Salud Mental, TELUS Health</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        El Dr. Matthew Chow es médico, líder empresarial y
+                        arquitecto del futuro del trabajo.
+                    </p>
+                    <p class="mt-2">
+                        En TELUS Health, el Dr. Chow diseña una plataforma
+                        integral de bienestar que beneficia a más de 150
+                        millones de trabajadores y familias. Asesora a las
+                        organizaciones más grandes y complejas del mundo para
+                        que se adapten y prosperen en un futuro impulsado por la
+                        IA, pero centrado en las personas.
+                    </p>
+                    <p class="mt-2">
+                        Como médico ejecutivo y expresidente de Doctors of BC,
+                        el Dr. Chow ha liderado en tiempos de crisis, gestionado
+                        cambios a gran escala y supervisado un presupuesto
+                        multimillonario para servicios médicos. Actualmente, se
+                        centra en desarrollar la estructura, la gobernanza y la
+                        mentalidad necesarias para que las organizaciones se
+                        adapten, innoven y prosperen en un entorno en constante
+                        evolución.
+                    </p>
+                    <p class="mt-2">
+                        El Fundamento clínico del Dr. Chow en psiquiatría de
+                        urgencias, atención de crisis agudas y salud mental
+                        pediátrica fundamenta su visión del futuro: la
+                        tecnología debe trabajar en conjunto con las personas en
+                        sistemas complejos, imperfectos y profundamente humanos.
+                        Esta base le permite aportar compasión, integridad y
+                        buen juicio a la transformación de los entornos
+                        laborales, el bienestar de los empleados y la
+                        configuración del cambio impulsado por la IA.
+                    </p>
+                    <p class="mt-2">
+                        Además de su labor en TELUS Health, el Dr. Chow
+                        contribuye al ecosistema en general mediante funciones
+                        de asesoría y liderazgo en organizaciones sin fines de
+                        lucro, incluyendo su trabajo con el Instituto de Salud
+                        Mental de la UBC y el programa "Substance: Learn About
+                        It, Talk About It". Estas funciones le permiten
+                        mantenerse conectado con la realidad de la comunidad,
+                        las investigaciones emergentes y las experiencias
+                        vividas por las personas que interactúan con los
+                        sistemas de salud y sociales.
+                    </p>
+                    <p class="mt-2">
+                        El Dr. Chow está construyendo nuestro futuro, impulsado
+                        por la IA pero centrado en el ser humano, junto con
+                        líderes excepcionales que pueden integrarse en diversos
+                        ámbitos: clínico y personal, local y global, empresarial
+                        y de interés público, humanos y tecnología.
+                    </p>
+                </div>
+            </div>
         </section>
     </article>
-   <Footer/>
+    <Footer />
 </Layout>
 
 <style>
@@ -146,11 +332,10 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
     }
 
     .speaker-info {
-
         /* condensed (stacked) rules go here */
         display: flex;
         flex-direction: column;
-        .speaker-name  {
+        .speaker-name {
             display: block;
         }
 
@@ -160,8 +345,6 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
             .speaker-photo {
                 width: 33%;
             }
-                        
-            
         }
     }
 
@@ -169,7 +352,5 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
         @container (min-width: 48ch) {
             display: none;
         }
-
     }
-</style>        
-
+</style>
