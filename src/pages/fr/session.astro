@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/fr/Header.astro"
 import Footer from "../../components/fr/Footer.astro"
+import calendarIcon23 from "../../assets/icons/calendar-icon-23.svg"
+let icsUrl = "/media/2026-07-23/Francais-PP-23-juillet-2026.ics"
 
 import { Image } from "astro:assets"
 import photoKlug from "../../assets/speakers/portrait-klug-dawn-marie-2026-07.jpg"
@@ -64,6 +66,20 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
                         <li>19 h 00 – 20 h 30 HE</li>
                         <li>18 h 00 – 19 h 30 HC</li>
                         <li>16 h 00 – 17 h 30 HP</li>
+                        <li class="mt-2">
+                            <a
+                                href={icsUrl}
+                                class="hover:text-powderblue-700 inline-flex items-center gap-2">
+                                <Image
+                                    src={calendarIcon23}
+                                    width="16"
+                                    height="16"
+                                    alt=""
+                                />
+                                <span>Ajouter au calendrier</span>
+                            </a>
+                            <!-- <AddToCalendar date={"2026-07-23"} /> -->
+                        </li>
                     </ul>
                 </div>
                 <div class="mt-4">
