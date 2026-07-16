@@ -28,8 +28,7 @@ export default defineConfig({
             "https://professionalsplatform.org/media/2026-07-23/Espanol-PP-23-julio-2026.pdf",
         "/fr/announcement":
             "https://professionalsplatform.org/media/2026-07-23/Francais-PP-23-juillet-2026.pdf",
-        "/faq":
-            "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
+        "/faq": "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
         "/en/faq":
             "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
         "/es/faq":
@@ -39,10 +38,10 @@ export default defineConfig({
         "/letter":
             "https://professionalsplatform.org/media/2026-07-23/English23JulyLTR.pdf",
         "/en/letter":
-            "https://professionalsplatform.org/media/2026-07-23/English23JulyLTR.pdf",
+            "https://professionalsplatform.org/media/2026-07-23/Professionals_Platform_23_July_Reminder_Letter_ENGLISH.pdf",
         "/es/letter":
-            "https://professionalsplatform.org/media/2026-07-23/Espanol23dejulioLTR.pdf",
+            "https://professionalsplatform.org/media/2026-07-23/Professionals_Platform_23_July_Reminder_Letter_SPANISH.pdf",
         "/fr/letter":
-            "https://professionalsplatform.org/media/2026-07-23/Francais23juilletLTR.pdf"
+            "https://professionalsplatform.org/media/2026-07-23/Professionals_Platform_23_July_Reminder_Letter_FRENCH.pdf",
     },
 })
