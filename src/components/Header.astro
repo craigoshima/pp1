@@ -1,25 +1,26 @@
 ---
 import Nav from "./Nav.astro"
 ---
-<header class="header bg-linear-to-br from-powderblue-200 to-powderblue-300">
-    <div class="mx-auto max-w-[1024px] flex">
+
+<header class="header from-powderblue-200 to-powderblue-300 bg-linear-to-br">
+    <div class="mx-auto max-w-[1024px] md:flex">
         <div class="w-full px-3 py-1">
             <a href="/">
                 <img
                     src="/images/pps-logo.svg"
                     alt="Professionals Platform Series"
-                    style="height:96px"
+                    style="height:96px; min-width: 128px"
                 />
             </a>
         </div>
-        <div class="relative xp-3 text-right mr-4">
-            <Nav/>
+        <div class="relative mr-4 py-2 text-right">
+            <Nav />
         </div>
     </div>
 </header>
 <style>
-.header {
-    /* background: var(--color-powderblue-200); */
+    .header {
+        /* background: var(--color-powderblue-200); */
         /* linear-gradient(
             92deg,
             #b9dfe9 30%,
@@ -29,6 +30,5 @@ import Nav from "./Nav.astro"
         /* ,
         url("/images/mono-chairs-1600.jpg") lightgray 50% / cover
             no-repeat; */
-}
-
+    }
 </style>

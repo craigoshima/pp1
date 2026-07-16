@@ -28,10 +28,9 @@ a.link {
     }
 }
 
-
 .nav {
     a[href] {
-        color: #FFF;
+        color: #fff;
     }
 
     a:hover,
@@ -40,7 +39,49 @@ a.link {
         text-decoration: underline;
         cursor: pointer !important;
     }
+}
+/* 
+           <ul class="flex gap-2 border-b border-gray-200">
+                <li>
+                    <a
+                        href="/session"
+                        class="block rounded-t border-t border-r border-l border-gray-300 px-4 py-2">
+                        23 July 2026
+                    </a>
+                </li>
+                <li>
+                    <span
+                        data-href="/sessions/2026-10"
+                        class="bg-gray-050 block rounded-t border-t border-r border-l border-gray-300 px-4 py-2">
+                        22 October 2026
+                    </span>
+                </li>
+            </ul> */
 
+.tabs {
+    display: flex;
+    gap: 0.5em;
+    border-bottom: 1px solid var(--color-gray-300);
+
+    .tab > * {
+        display: block;
+        padding: 0.5em 1em 0.25em;
+        border-width: 0 0 0.25em 0;
+        border-color: transparent;
+        position: relative;
+        top: 1px;
+    }
+
+    .tab > a:hover,
+    .tab > a:focus {
+        background-color: var(--color-powderblue-100);
+        border-color: var(--color-powderblue-200);
+    }
+
+    .tab.selected > * {
+        border-color: var(--color-zest-300);
+        background-color: var(--color-zest-100);
+    }
 }
 
 .prose {

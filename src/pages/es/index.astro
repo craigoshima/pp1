@@ -7,10 +7,9 @@ import SectionColumned from "../../components/SectionColumned.astro"
 ---
 
 <Layout>
-
     <header class="header">
-        <div class="mx-auto max-w-[1024px] flex">
-            <div class="w-full px-3 py-1">    
+        <div class="mx-auto flex max-w-[1024px]">
+            <div class="w-full px-3 py-1">
                 <img
                     src="/images/pps-logo.svg"
                     alt="Serie de plataformas para profesionales"
@@ -20,20 +19,19 @@ import SectionColumned from "../../components/SectionColumned.astro"
                     Serie de plataformas para profesionales
                 </div>
                 <p class="p-4 text-xl italic">
-                    Un foro intersectorial que reúne a profesionales y
-                    miembros de Alcohólicos Anónimos de todo Estados Unidos
-                    y Canadá para fortalecer el apoyo a las personas con
-                    trastorno por consumo de alcohol. La plataforma ofrecerá
-                    una serie de conversaciones que comenzarán en julio de
-                    2026.
-                </p>                
+                    Un foro intersectorial que reúne a profesionales y miembros
+                    de Alcohólicos Anónimos de todo Estados Unidos y Canadá para
+                    fortalecer el apoyo a las personas con trastorno por consumo
+                    de alcohol. La plataforma ofrecerá una serie de
+                    conversaciones que comenzarán en julio de 2026.
+                </p>
             </div>
-            <div class="relative text-right mr-4">
+            <div class="relative mr-4 text-right">
                 <Nav />
             </div>
         </div>
     </header>
-    
+
     <main class="mx-auto max-w-[1024px]">
         <SectionColumned>
             <div>
@@ -45,10 +43,12 @@ import SectionColumned from "../../components/SectionColumned.astro"
                                 <strong>23 de julio de 2026</strong>
                             </a>
                         </div>
-                        <main class="text-center px-2 py-4">
+                        <main class="px-2 py-4 text-center">
                             <h3 class="text-2xl">
                                 <strong>Dawn Klug</strong>
-                                <small class="font-bold block">M.S., LCMHC, CEAP</small>
+                                <small class="block font-bold">
+                                    M.S., LCMHC, CEAP
+                                </small>
                             </h3>
 
                             <p>
@@ -57,26 +57,30 @@ import SectionColumned from "../../components/SectionColumned.astro"
                             </p>
 
                             <p class="mt-4">
-                                Miembro del consejo directivo de clase A de
-                                Alcohólicos Anónimos
+                                Custodio Clase A, Junta de Servicios Generales
+                                de Alcohólicos Anónimos
                             </p>
                         </main>
                     </ForumEventCard>
                     <ForumEventCard>
                         <div slot="dateinfo">
                             <p>Jueves</p>
-                            <p class="text-xl">
+                            <a
+                                href="/es/sessions/2026-10"
+                                class="block text-xl">
                                 <strong>22 de octubre de 2026</strong>
-                            </p>
+                            </a>
                         </div>
-                        <main class="text-center px-2 py-4">
+                        <main class="px-2 py-4 text-center">
                             <h3 class="text-2xl">
-                                <strong> Chief Judge<br /> Kerry Meyer</strong>
+                                <strong>
+                                    Juez Presidente<br /> Kerry Meyer
+                                </strong>
                             </h3>
                             <p>Minneapolis</p>
                             <p class="mt-4">
-                                Miembro del consejo directivo de clase A de
-                                Alcohólicos Anónimos
+                                Custodio Clase A, Junta de Servicios Generales
+                                de Alcohólicos Anónimos
                             </p>
                         </main>
                     </ForumEventCard>
@@ -94,8 +98,10 @@ import SectionColumned from "../../components/SectionColumned.astro"
                             Estados Unidos
                         </p>
                         <p class="pt-4">
-                            Miembro del consejo directivo de clase A de
+                            Custodio Clase A, Junta de Servicios Generales de
                             Alcohólicos Anónimos
+                            <!-- Miembro del consejo directivo de clase A de
+                            Alcohólicos Anónimos -->
                         </p>
                     </div>
                     <div class="bg-zest-200 rounded-2xl px-4 py-2 text-center">
@@ -105,7 +111,7 @@ import SectionColumned from "../../components/SectionColumned.astro"
                             Buffalo
                         </p>
                         <p class="pt-4">
-                            Miembro del consejo directivo de clase A de
+                            Custodio Clase A, Junta de Servicios Generales de
                             Alcohólicos Anónimos
                         </p>
                     </div>
@@ -138,17 +144,17 @@ import SectionColumned from "../../components/SectionColumned.astro"
                         <a
                             href="https://www.aa.org/es/Cooperation-with-the-Professional-Community"
                             target="_blank"
-                            class="link"
-                            >Cooperación con la Comunidad Profesional (CCP)
+                            class="link">
+                            Cooperación con la Comunidad Profesional (CCP)
                         </a>
                     </p>
                     <p class="mt-4">
                         <a
                             href="https://www.aa.org/es/public-information-committees"
                             target="_blank"
-                            class="link"
-                            >Comités de Información Pública</a
-                        >
+                            class="link">
+                            Comités de Información Pública
+                        </a>
                     </p>
                 </div>
 
@@ -164,7 +170,7 @@ import SectionColumned from "../../components/SectionColumned.astro"
             </div>
         </SectionColumned>
     </main>
-    <Footer/>
+    <Footer />
 
     <style>
         .header {

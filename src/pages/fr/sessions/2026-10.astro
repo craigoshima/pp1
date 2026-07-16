@@ -1,0 +1,390 @@
+---
+import Layout from "../../../layouts/Layout.astro"
+import Header from "../../../components/fr/Header.astro"
+import Footer from "../../../components/fr/Footer.astro"
+
+import { Image } from "astro:assets"
+import photoMeyer from "../../../assets/speakers/2026-10-22-portrait-meyer.jpg"
+import photoHourigan from "../../../assets/speakers/2026-10-22-portrait-hourigan.jpg"
+import photoPhilp from "../../../assets/speakers/2026-10-22-portrait-philp.jpg"
+import calendarIcon22 from "../../../assets/icons/calendar-icon-22.svg"
+
+let icsUrl = "/media/2026-10-22/Professionals-Platform-Francais.ics"
+---
+
+<Layout>
+    <Header />
+    <article class="mx-auto max-w-[1024px] p-4">
+        <div class="mb-4">
+            <ul class="tabs">
+                <li class="tab">
+                    <a href="/fr/session">23 Juillet 2026</a>
+                </li>
+                <li class="tab selected">
+                    <span data-href="/fr/sessions/2026-10">
+                        22 Octobre 2026
+                    </span>
+                </li>
+            </ul>
+            <h1 class="my-4 text-2xl">
+                Quel rôle de leadership la communauté juridique peut-elle jouer
+                dans la lutte contre les troubles liés à l’usage de l’alcool
+                (TUA)?
+            </h1>
+        </div>
+
+        <div class="gap-4 md:grid md:grid-cols-3">
+            <div class="prose col-span-2 rounded-lg border-gray-300 py-2">
+                <p>
+                    Joignez-vous à des juges, des avocats, des conseillers
+                    juridiques, des professionnels des programmes d’aide aux
+                    avocats et à des leaders de la communauté juridique pour
+                    explorer les enjeux liés au trouble lié à l’usage de
+                    l’alcool (TUA).
+                </p>
+                <p>
+                    Découvrez comment le leadership judiciaire, la recherche et
+                    les programmes d’aide aux juristes contribuent au bien-être
+                    professionnel et améliorent les vies des personnes, des
+                    familles et des collectivités que sert le système de
+                    justice.
+                </p>
+                <p class="">Public visé</p>
+                <ul>
+                    <li>Les juges et les membres de la magistrature</li>
+                    <li>
+                        Les avocats exerçant en cabinet privé ou dans le secteur
+                        public
+                    </li>
+                    <li>
+                        Les directeurs juridiques et les services juridiques
+                        internes
+                    </li>
+                    <li>
+                        Les professionnels des programmes d’aide aux avocats
+                        (LAP)
+                    </li>
+                    <li>
+                        Les dirigeants des barreaux et des associations
+                        juridiques
+                    </li>
+                    <li>Les organismes d’aide juridique et d’intérêt public</li>
+                    <li>Les étudiants en droit et les enseignants en droit</li>
+                    <li>
+                        Les professionnels de la santé et de la santé
+                        comportementale
+                    </li>
+                    <li>
+                        Les responsables du rétablissement et les leaders
+                        communautaires
+                    </li>
+                    <li>
+                        Toute personne intéressée par le bien-être et le
+                        rétablissement des avocats
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="from-powderblue-100 to-powderblue-050 col-span-1 rounded-lg bg-gradient-to-b px-4 py-2">
+                <div>
+                    <strong>Jeudi 22 Octobre 2026</strong>
+                    <ul class="mt-1">
+                        <li>19 h 00 – 20 h 30 HE</li>
+                        <li>18 h 00 – 19 h 30 HC</li>
+                        <li>16 h 00 – 17 h 30 HP</li>
+                        <li class="mt-2">
+                            <a
+                                href={icsUrl}
+                                class="hover:text-powderblue-700 inline-flex items-center gap-2">
+                                <Image
+                                    src={calendarIcon22}
+                                    width="16"
+                                    height="16"
+                                    alt=""
+                                />
+                                <span>Ajouter au calendrier</span>
+                            </a>
+                            <!-- <AddToCalendar date={"2026-07-23"} /> -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <strong>Accès en ligne (Zoom)</strong>
+                    <div class="xgrid mt-1 grid-cols-[100px_1fr]">
+                        <p class="fit-content">Identifiant de la réunion:</p>
+                        <p>867 7265 7920</p>
+                        <p class="mt-2">Code d'accès:</p>
+                        <p>853223</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    Traduction en espagnol et en français disponible.
+                </div>
+            </div>
+        </div>
+
+        <h2 class="my-4 text-2xl font-bold">À propos des conférenciers</h2>
+        <section class="bios grid gap-4 md:grid-cols-3">
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoMeyer}
+                        alt="Juez Presidente Kerry Meyer"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                La juge en chef Kerry Meyer
+                            </span>
+                            <span>Minneapolis</span>
+                        </h4>
+                        <div class="text-sm">
+                            <p class="mt-2">
+                                Administratrice de classe A, Conseil des
+                                Services généraux des Alcooliques anonymes
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Kerry Meyer est actuellement juge en chef du tribunal de
+                        première instance de Minneapolis (comté de Hennepin),
+                        dans le Minnesota. Elle est également administratrice
+                        non alcoolique au sein du Conseil des services généraux
+                        des Alcooliques anonymes. Au cours de ses 20 années de
+                        carrière judiciaire, la juge Meyer a présidé de nombreux
+                        types d’affaires, dont plus de trois ans en tant que
+                        juge à temps plein au sein d’un tribunal de traitement.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoHourigan}
+                        alt="Yvette Hourigan"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Yvette Hourigan, Esq.
+                            </span>
+                        </h4>
+                        <div class="text-sm">
+                            <p>
+                                Directrice du Kentucky Lawyers Assistance
+                                Program (KYLAP)
+                            </p>
+                            <p class="mt-2">American Bar Association</p>
+                            <p class="mt-2">
+                                Directrice générale, Kentucky Lawyers Assistance
+                                Program
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Yvette Hourigan est directrice du Kentucky Lawyers
+                        Assistance Program (KYLAP). Diplômée de l’université
+                        d’État de Murray et de la faculté de droit J. David
+                        Rosenberg de l’université du Kentucky, elle est avocate
+                        agréée, professionnelle certifiée en assistance aux
+                        salariés et spécialiste certifiée en soutien par les
+                        pairs. Elle est certifiée en premiers secours en santé
+                        mentale (Mental Health First Aid) et en prévention du
+                        suicide selon la méthode QPR (Question Persuade Refer).
+                    </p>
+                    <p class="mt-2">
+                        Après ses études de droit, Yvette a exercé dans le
+                        centre et l’est du Kentucky en tant qu’avocate
+                        spécialisée dans les procès civils, notamment dans les
+                        affaires de préjudice corporel et les litiges familiaux
+                        pour le compte des plaignants. Elle a été nommée
+                        directrice générale du KYLAP par la Cour suprême du
+                        Kentucky en 2011. Elle est présidente de la Commission
+                        sur les programmes d’aide aux avocats (COLAP) de
+                        l’American Bar Association (ABA) ; ancienne présidente
+                        du Comité sur la diversité, l’équité et l’inclusion de
+                        l’ABA/COLAP ; et ancienne membre du Groupe de travail
+                        national sur le bien-être des avocats.
+                    </p>
+                    <p class="mt-2">
+                        Yvette est la lauréate 2025 du prix « Outstanding
+                        Service to Young Lawyers » décerné par la division des
+                        jeunes avocats de la KBA. Elle est lauréate de la
+                        médaille Algernon Sydney Sullivan, une distinction
+                        humanitaire décernée par l’université du Kentucky. Elle
+                        s’est vu décerner le prix d’excellence du président de
+                        la Cour suprême du Kentucky en 2024. En 2021, elle a
+                        reçu le prix d’excellence du président de la KBA, remis
+                        par le président Tom Kerrick, pour le travail accompli
+                        par le KYLAP au service de la communauté juridique du
+                        Kentucky pendant la pandémie de COVID-19. Elle a
+                        également reçu le prix « Uncommon Counselor » de la
+                        Fondation Dave Nee pour son travail en matière de
+                        prévention du suicide au sein de la profession
+                        juridique, ainsi que le prix de la sécurité des
+                        consommateurs décerné par la Kentucky Justice
+                        Association et la Family Safety Foundation. Cette
+                        distinction est attribuée à une personne qui défend
+                        ouvertement les droits des consommateurs ou qui a mis en
+                        péril son propre bien-être pour la santé ou la sécurité
+                        future d’autrui.
+                    </p>
+                    <p class="mt-2">
+                        Elle intervient à l’échelle locale et nationale sur des
+                        sujets liés à la compétence et au bien-être des avocats,
+                        aux troubles de la fonction, à la dépendance et à la
+                        prévention du suicide, et partage son histoire
+                        personnelle de guérison d’un trouble lié à l’usage de
+                        substances. Le travail de KYLAP sur la santé mentale, le
+                        bien-être et la prévention du suicide chez les avocats a
+                        été relayé à l’échelle nationale dans l’émission « Legal
+                        View with Ashleigh Banfield », sur CNN, Bloomberg Law,
+                        dans The Guardian, sur NPR et dans The Huffington Post.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoPhilp}
+                        alt="Le juge Robert A. Philp"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Le juge Robert A. Philp
+                            </span>
+                            <span class="block">Conseil du Roi</span>
+                        </h4>
+                        <div class="text-sm">
+                            <p>
+                                Associé chez Twinn & Philp, à Edmonton, en
+                                Alberta
+                            </p>
+                            <p class="mt-2">
+                                Co-fondateur et ancien directeur, Alberta
+                                Lawyers’ Assistance Society
+                            </p>
+                            <p class="mt-2">
+                                Ancien directeur de la Commission des droits de
+                                la personne et des tribunaux de l’Alberta
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Le juge Robert A. Philp, Conseil du Roi, est associé au
+                        sein du cabinet Twinn & Philp à Edmonton, en Alberta.
+                        Juriste, avocat et défenseur des droits de la personne
+                        canadien de renom, il possède plusieurs décennies
+                        d’expérience au sein du système judiciaire, de la
+                        fonction publique et de la profession juridique. Tout au
+                        long de sa carrière, il a concilié la pratique du droit,
+                        des fonctions de direction judiciaire et la fonction
+                        publique avec un engagement profond en faveur de la
+                        justice, de l’équité, de la dignité, de l’accès à la
+                        justice et du bien-être des avocats.
+                    </p>
+                    <p class="mt-2">
+                        Le juge Philp a occupé le poste de directeur de la
+                        Commission des droits de la personne et des tribunaux de
+                        l’Alberta, où il était responsable des fonctions
+                        administratives, opérationnelles et juridictionnelles de
+                        la Commission, supervisant des recours complexes en
+                        matière de droits de la personne et assurant la
+                        direction de l’organisation. Il a également occupé les
+                        fonctions de juge à la Cour provinciale de l’Alberta et
+                        de juge suppléant pour les Territoires du Nord-Ouest,
+                        présidant des procès pénaux, des audiences complexes, la
+                        gestion judiciaire des dossiers et des procédures de
+                        mise en liberté sous caution. Au début de sa carrière,
+                        il a exercé dans les domaines du droit du travail, du
+                        droit de l’emploi, des droits de l’homme et du droit
+                        administratif, plaidant devant toutes les instances
+                        judiciaires, y compris la Cour suprême du Canada.
+                    </p>
+                    <p class="mt-2">
+                        Outre son activité d’avocat et ses fonctions
+                        judiciaires, le juge Philp a occupé de nombreux postes à
+                        responsabilité au sein de la profession juridique et de
+                        la fonction publique. Il a été directeur du Programme
+                        d’aide aux avocats, membre du Conseil de l’Ordre des
+                        avocats de l’Alberta, professeur adjoint à l’Université
+                        de l’Alberta et conférencier invité sur les droits de
+                        l’homme, le droit pénal, le droit administratif et le
+                        droit du travail. Il a également consacré de nombreuses
+                        années à l’accompagnement d’étudiants en droit et
+                        d’avocats en début de carrière, tout en siégeant au sein
+                        de nombreux conseils d’administration d’organismes à but
+                        non lucratif et d’associations communautaires.
+                    </p>
+                    <p class="mt-2">
+                        La brillante carrière du juge Philp dans la fonction
+                        publique a été récompensée par de nombreuses
+                        distinctions, notamment le Prix pour services distingués
+                        décerné par le Barreau de l’Alberta et l’Association du
+                        Barreau canadien, la Médaille du centenaire de
+                        l’Alberta, la Médaille du couronnement du roi, la
+                        Médaille du jubilé d’or de la reine, le Prix du service
+                        communautaire décerné par les Services de conseil aux
+                        Autochtones de l’Alberta et le Prix des anciens élèves
+                        émérites de l’Université de l’Alberta.
+                    </p>
+                    <p class="mt-2">
+                        Il continue d’exercer un rôle de leader, de mentor et de
+                        défenseur, dont l’action reflète un engagement de toute
+                        une vie en faveur de la justice, du service public et du
+                        renforcement de la profession juridique
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+    <Footer />
+</Layout>
+
+<style>
+    .speaker-card {
+        container-type: inline-size;
+    }
+
+    .speaker-info {
+        /* condensed (stacked) rules go here */
+        display: flex;
+        flex-direction: column;
+        .speaker-name {
+            display: block;
+        }
+
+        /* spread-out rules go here */
+        @container (min-width: 48ch) {
+            flex-direction: row;
+            .speaker-photo {
+                width: 33%;
+            }
+        }
+    }
+
+    hr {
+        @container (min-width: 48ch) {
+            display: none;
+        }
+    }
+</style>

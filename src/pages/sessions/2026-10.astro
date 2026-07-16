@@ -1,0 +1,337 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import Header from "../../components/Header.astro"
+import Footer from "../../components/Footer.astro"
+import AddToCalendar from "../../components/AddToCalendarLink.astro"
+
+import { Image } from "astro:assets"
+import photoMeyer from "../../assets/speakers/2026-10-22-portrait-meyer.jpg"
+import photoHourigan from "../../assets/speakers/2026-10-22-portrait-hourigan.jpg"
+import photoPhilp from "../../assets/speakers/2026-10-22-portrait-philp.jpg"
+import calendarIcon22 from "../../assets/icons/calendar-icon-22.svg"
+let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
+---
+
+<Layout>
+    <Header />
+    <article class="mx-auto max-w-[1024px] p-4">
+        <div class="mb-4">
+            <ul class="tabs">
+                <li class="tab">
+                    <a href="/session">23 July 2026</a>
+                </li>
+                <li class="tab selected">
+                    <span data-href="/sessions/2026-10">22 October 2026</span>
+                </li>
+            </ul>
+            <h1 class="my-4 text-2xl">
+                What Leadership Role Can the Legal Community Play in Addressing
+                Alcohol Use Disorder (AUD)?
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+            <div class="prose col-span-2 rounded-lg border-gray-300 py-2">
+                <p>
+                    Join judges, lawyers, general counsel, lawyer assistance
+                    professionals, and leaders from across the legal community
+                    to explore how judicial leadership, research, and lawyer
+                    assistance programs are strengthening understanding of
+                    Alcohol Use Disorder (AUD), enhancing professional
+                    well-being, and improving outcomes for the individuals,
+                    families, and communities served by the legal system.
+                </p>
+                <p>Who Should Attend:</p>
+                <ul>
+                    <li>Judges and members of the judiciary</li>
+                    <li>Lawyers in private and public practice</li>
+                    <li>General Counsel and in-house legal departments</li>
+                    <li>Lawyer Assistance Program (LAP) professionals</li>
+                    <li>Bar and legal association leaders</li>
+                    <li>Legal aid and public interest organizations</li>
+                    <li>Law students and legal educators</li>
+                    <li>Healthcare and behavioral health professionals</li>
+                    <li>Recovery and community leaders</li>
+                    <li>Anyone interested in lawyer well-being and recovery</li>
+                </ul>
+            </div>
+
+            <div
+                class="from-powderblue-100 to-powderblue-050 col-span-1 rounded-lg bg-gradient-to-b px-4 py-2">
+                <div>
+                    <strong>Thursday 22 October 2026</strong>
+                    <ul class="mt-1">
+                        <li>7:00–8:30 PM ET</li>
+                        <li>6:00–7:30 PM CT</li>
+                        <li>4:00–5:30 PM PT</li>
+                        <li class="mt-2">
+                            <a
+                                href={icsUrl}
+                                class="hover:text-powderblue-700 inline-flex items-center gap-2">
+                                <Image
+                                    src={calendarIcon22}
+                                    width="16"
+                                    height="16"
+                                    alt=""
+                                />
+                                <span>Add to Calendar</span>
+                            </a>
+                            <!-- <AddToCalendar date={"2026-07-23"} /> -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <strong>Virtual Access (Zoom)</strong>
+                    <div class="mt-1 grid grid-cols-[100px_1fr]">
+                        <p class="fit-content">Meeting ID:</p>
+                        <p>867 7265 7920</p>
+                        <p class="fit-content">Passcode:</p>
+                        <p>853223</p>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    Spanish and French interpretation available
+                </div>
+            </div>
+        </div>
+
+        <h2 class="my-4 text-2xl font-bold">About the Speakers</h2>
+        <section class="bios grid gap-4 md:grid-cols-3">
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoMeyer}
+                        alt="Portrait of Chief Judge Kerry Meyer"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Chief Judge Kerry Meyer
+                            </span>
+                            <span>Minneapolis</span>
+                        </h4>
+                        <div class="text-sm">
+                            <p class="mt-2">
+                                Class A Trustee, General Service Board of
+                                Alcoholics Anonymous
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Kerry Meyer is the current Chief Judge of the trial
+                        court in Minneapolis (Hennepin County) Minnesota. She is
+                        also a non-alcoholic trustee on the General Service
+                        Board of Alcoholics Anonymous. Judge Meyer has presided
+                        over many types of cases in her 20 years as a judge,
+                        including over three years as a fulltime Treatment Court
+                        judge.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoHourigan}
+                        alt="Portrait of Yvette Hourigan"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Yvette Hourigan, Esq.
+                            </span>
+                        </h4>
+                        <div class="text-sm">
+                            <p>
+                                Chair, Commission on Lawyer Assistance Programs
+                                (CoLAP)
+                            </p>
+                            <p class="mt-2">American Bar Association</p>
+                            <p class="mt-2">
+                                Director, Kentucky Lawyer Assistance Program
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Yvette Hourigan is the director of the Kentucky Lawyer
+                        Assistance Program (KYLAP). Yvette graduated from Murray
+                        State University and the J. David Rosenberg College of
+                        Law at the University of Kentucky. She is a licensed
+                        attorney, a Certified Employee Assistance Professional,
+                        and a Certified Peer Support Specialist. She is
+                        certified in Mental Health First Aid and QPR Question
+                        Persuade Refer Suicide Prevention.
+                    </p>
+
+                    <p class="mt-2">
+                        After law school, Yvette practiced in Central and
+                        Eastern Kentucky as a civil trial lawyer focusing on
+                        plaintiff’s personal injury and domestic litigation. She
+                        was appointed KYLAP Executive Director by the Kentucky
+                        Supreme Court in 2011. She is the Chair of the American
+                        Bar Association’s Commission on Lawyer Assistance
+                        Programs (COLAP); the former chair of the ABA/COLAP
+                        Diversity, Equity & Inclusion Committee; and former
+                        member of the National Task Force on Lawyer Well-Being.
+                    </p>
+                    <p class="mt-2">
+                        Yvette is the 2025 recipient of the KBA Young Lawyers
+                        Division Outstanding Service to Young Lawyers Award. She
+                        is the recipient of the Algernon Sydney Sullivan
+                        Medallion, a humanitarian award, by the University of
+                        Kentucky. She was awarded the Kentucky Supreme Court
+                        Chief Justice’s Special Service Award in 2024. In 2021
+                        she was awarded the KBA President’s Special Service
+                        Award by President Tom Kerrick for KYLAP’s service to
+                        Kentucky’s legal community during the COVID-19 pandemic.
+                        She also received the Dave Nee Foundation’s “Uncommon
+                        Counselor” Award for her work in suicide prevention in
+                        the legal profession as well as the Kentucky Justice
+                        Association and Family Safety Foundation’s Consumer
+                        Safety Award. This honor goes to an individual who is an
+                        outspoken advocate for consumer rights or who has risked
+                        their own well-being for the future health or safety of
+                        others.
+                    </p>
+                    <p class="mt-2">
+                        She speaks locally and nationally on topics impacting
+                        lawyer competence and well-being, impairment, addiction,
+                        and suicide prevention, and shares her personal story of
+                        recovery from substance use disorder. KYLAP’s work on
+                        lawyer mental health, well-being and suicide prevention
+                        has been featured nationally on Legal View with Ashleigh
+                        Banfield, CNN, Bloomberg Law, The Guardian, NPR, and in
+                        The Huffington Post.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoPhilp}
+                        alt="Portrait of Robert Philp"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Justice Robert A. Philp
+                            </span>
+                            <span class="block">King’s Counsel</span>
+                        </h4>
+                        <div class="text-sm">
+                            <p>Partner, Twinn & Philp, Edmonton, Alberta</p>
+                            <p class="mt-2">
+                                Co-founder and Former Director, Alberta Lawyers'
+                                Assistance Society
+                            </p>
+                            <p class="mt-2">
+                                Former Chief, Alberta Human Rights Commission
+                                and Tribunals
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-zest-400 my-4" />
+                <div class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Justice Robert A. Philp, King’s Counsel, is a partner
+                        with Twinn & Philp in Edmonton, Alberta, and a respected
+                        Canadian jurist, lawyer, and human rights leader with
+                        decades of experience in the justice system, public
+                        service, and legal profession. Throughout his career, he
+                        has combined legal practice, judicial leadership, and
+                        public service with a deep commitment to justice,
+                        equity, dignity, access to justice, and lawyer
+                        well-being.
+                    </p>
+                    <p class="mt-2">
+                        Justice Philp served as Chief of the Alberta Human
+                        Rights Commission and Tribunals, where he was
+                        responsible for the Commission's administrative,
+                        operational, and adjudicative functions, overseeing
+                        complex human rights appeals and organizational
+                        leadership. He also served as a Provincial Court Judge
+                        in Alberta and as Deputy Judge for the Northwest
+                        Territories, presiding over criminal trials, complex
+                        hearings, judicial case management, and bail
+                        proceedings. Earlier in his career, he practiced labour,
+                        employment, human rights, and administrative law,
+                        appearing before all levels of court, including the
+                        Supreme Court of Canada.
+                    </p>
+                    <p class="mt-2">
+                        In addition to his legal practice and judicial service,
+                        Justice Philp has held numerous leadership appointments
+                        within the legal profession and public service. He has
+                        served as Director of the Lawyers' Assistance Program,
+                        Bencher of the Law Society of Alberta, Adjunct Professor
+                        at the University of Alberta, and guest lecturer on
+                        human rights, criminal law, administrative law, and
+                        employment law. He has also devoted many years to
+                        mentoring law students and early-career lawyers while
+                        serving on numerous nonprofit and community boards.
+                    </p>
+                    <p class="mt-2">
+                        Justice Philp's distinguished public service has been
+                        recognized through numerous honours, including the
+                        Distinguished Service Award from the Law Society of
+                        Alberta and the Canadian Bar Association, the Alberta
+                        Centennial Medal, the King's Coronation Medal, the
+                        Queen's Golden Jubilee Medal, the Community Service
+                        Award from Native Counselling Services of Alberta, and
+                        the Distinguished Alumni Award from the University of
+                        Alberta.
+                    </p>
+                    <p class="mt-2">
+                        He continues to serve as a leader, mentor, and advocate
+                        whose work reflects a lifelong commitment to justice,
+                        public service, and strengthening the legal profession.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+    <Footer />
+
+    <style>
+        .speaker-card {
+            container-type: inline-size;
+        }
+
+        .speaker-info {
+            /* condensed (stacked) rules go here */
+            display: flex;
+            flex-direction: column;
+            .speaker-name {
+                display: block;
+            }
+
+            /* spread-out rules go here */
+            @container (min-width: 48ch) {
+                flex-direction: row;
+                .speaker-photo {
+                    max-width: 33%;
+                }
+            }
+        }
+
+        hr {
+            @container (min-width: 48ch) {
+                display: none;
+            }
+        }
+    </style>
+</Layout>

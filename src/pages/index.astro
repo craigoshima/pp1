@@ -9,22 +9,21 @@ import SectionColumned from "../components/SectionColumned.astro"
 
 <Layout>
     <header class="header">
-        <div class="mx-auto max-w-[1024px] flex">
-            <div class="w-full px-3 py-1">    
+        <div class="mx-auto flex max-w-[1024px]">
+            <div class="w-full px-3 py-1">
                 <img
                     src="/images/pps-logo.svg"
                     alt="Professionals Platform Series"
                     style="height:168px"
                 />
                 <p class="p-4 text-xl italic">
-                    A forum convening professionals and A.A. across the
-                    United States and Canada to strengthen support for
-                    individuals with Alcohol Use Disorder. The platform will
-                    feature a series of conversations across sectors,
-                    beginning in July 2026.
-                </p>                
+                    A forum convening professionals and A.A. across the United
+                    States and Canada to strengthen support for individuals with
+                    Alcohol Use Disorder. The platform will feature a series of
+                    conversations across sectors, beginning in July 2026.
+                </p>
             </div>
-            <div class="relative text-right mr-4">
+            <div class="relative mr-4 text-right">
                 <Nav />
             </div>
         </div>
@@ -37,14 +36,16 @@ import SectionColumned from "../components/SectionColumned.astro"
                     <ForumEventCard>
                         <div slot="dateinfo">
                             <p>Thursday</p>
-                            <a href="/session" class="text-xl block">
+                            <a href="/session" class="block text-xl">
                                 <strong>23 July 2026</strong>
                             </a>
                         </div>
-                        <main class="text-center px-2 py-4">
+                        <main class="px-2 py-4 text-center">
                             <h3 class="text-2xl">
                                 <strong>Dawn Klug</strong>
-                                <small class="font-bold block">M.S., LCMHC, CEAP</small>
+                                <small class="block font-bold">
+                                    M.S., LCMHC, CEAP
+                                </small>
                             </h3>
                             <p>
                                 President and Chief Operating Officer<br />
@@ -59,11 +60,11 @@ import SectionColumned from "../components/SectionColumned.astro"
                     <ForumEventCard>
                         <div slot="dateinfo">
                             <p>Thursday</p>
-                            <p class="text-xl">
+                            <a href="/sessions/2026-10" class="block text-xl">
                                 <strong>22 October 2026</strong>
-                            </p>
+                            </a>
                         </div>
-                        <main class="text-center px-2 py-4">
+                        <main class="px-2 py-4 text-center">
                             <h3 class="text-2xl">
                                 <strong>Chief Judge<br /> Kerry Meyer</strong>
                             </h3>
@@ -124,14 +125,16 @@ import SectionColumned from "../components/SectionColumned.astro"
                     <p>
                         <a
                             href="https://www.aa.org/Cooperation-with-the-Professional-Community"
-                            target="_blank" class="link">
+                            target="_blank"
+                            class="link">
                             Cooperation with the Professional Community (CPC)
                         </a>
                     </p>
                     <p class="mt-4">
                         <a
                             href="https://www.aa.org/public-information-committees"
-                            target="_blank" class="link">
+                            target="_blank"
+                            class="link">
                             Public Information Committees
                         </a>
                     </p>
@@ -149,8 +152,8 @@ import SectionColumned from "../components/SectionColumned.astro"
             </div>
         </SectionColumned>
     </main>
- 
-    <Footer/>
+
+    <Footer />
 
     <style>
         .header {

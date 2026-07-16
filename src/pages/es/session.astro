@@ -16,17 +16,20 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
     <Header />
     <article class="mx-auto max-w-[1024px] p-4">
         <div class="mb-4">
-            <p>
-                <!-- <a href="/sessions">Sessions</a> 
-                <span class="text-gray-400">&gt; </span> -->
-                <span>Jueves 23 de julio de 2026</span>
-            </p>
-            <h1 class="text-2xl">
+            <ul class="tabs">
+                <li class="tab selected">
+                    <span data-href="/es/session">23 de julio de 2026</span>
+                </li>
+                <li class="tab">
+                    <a href="/es/sessions/2026-10">22 de octubre de 2026</a>
+                </li>
+            </ul>
+            <h1 class="my-4 text-2xl">
                 ¿Cómo es un lugar de trabajo que favorece la recuperación?
             </h1>
         </div>
 
-        <div class="grid grid-cols-3 gap-4">
+        <div class="gap-4 md:grid md:grid-cols-3">
             <div class="prose col-span-2 rounded-lg border-gray-300 py-2">
                 <p>
                     Únase a profesionales de programas de asistencia al empleado
@@ -96,7 +99,7 @@ import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg
         </div>
 
         <h2 class="my-4 text-2xl font-bold">Acerca de los ponentes</h2>
-        <section class="bios grid gap-4 md:grid-cols-3">
+        <section class="bios gap-4 md:grid md:grid-cols-3">
             <div
                 class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
                 <div class="speaker-info">

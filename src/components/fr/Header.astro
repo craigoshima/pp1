@@ -1,8 +1,9 @@
 ---
 import Nav from "./Nav.astro"
 ---
+
 <header class="header">
-    <div class="mx-auto max-w-[1024px] flex">
+    <div class="mx-auto max-w-[1024px] md:flex">
         <div class="w-full px-3 py-1">
             <a href="/">
                 <img
@@ -12,14 +13,14 @@ import Nav from "./Nav.astro"
                 />
             </a>
         </div>
-        <div class="relative text-right mr-4">
-            <Nav/>
+        <div class="relative mr-4 py-2 text-right">
+            <Nav />
         </div>
     </div>
 </header>
 <style>
-.header {
-    background: var(--color-powderblue-200);
+    .header {
+        background: var(--color-powderblue-200);
         /* linear-gradient(
             92deg,
             #b9dfe9 30%,
@@ -29,6 +30,5 @@ import Nav from "./Nav.astro"
         /* ,
         url("/images/mono-chairs-1600.jpg") lightgray 50% / cover
             no-repeat; */
-}
-
+    }
 </style>
