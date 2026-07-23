@@ -21,13 +21,13 @@ export default defineConfig({
 
     redirects: {
         "/announcement":
-            "https://professionalsplatform.org/media/2026-07-23/English-PP-23-July-2026.pdf",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-October-2026-Announcement-English.jpg",
         "/en/announcement":
-            "https://professionalsplatform.org/media/2026-07-23/English-PP-23-July-2026.pdf",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-October-2026-Announcement-English.jpg",
         "/es/announcement":
-            "https://professionalsplatform.org/media/2026-07-23/Espanol-PP-23-julio-2026.pdf",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-de-octubre-de-2026-Anuncio-Espanol.jpg",
         "/fr/announcement":
-            "https://professionalsplatform.org/media/2026-07-23/Francais-PP-23-juillet-2026.pdf",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-octobre-2026-Annonce-Francais.jpg",
         "/faq": "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
         "/en/faq":
             "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
