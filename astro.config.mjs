@@ -20,6 +20,10 @@ export default defineConfig({
     },
 
     redirects: {
+        "/session": "https://professionalsplatform.org/sessions/2026-10",
+        "/es/session": "https://professionalsplatform.org/es/sessions/2026-10",
+        "/fr/session": "https://professionalsplatform.org/fr/sessions/2026-10",
+
         "/announcement":
             "https://professionalsplatform.org/media/2026-10-22/PP-22-October-2026-Announcement-English.jpg",
         "/en/announcement":

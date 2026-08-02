@@ -1,17 +1,17 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import Header from "../components/Header.astro"
-import Footer from "../components/Footer.astro"
-import AddToCalendar from "../components/AddToCalendarLink.astro"
+import Layout from "../../layouts/Layout.astro"
+import Header from "../../components/Header.astro"
+import Footer from "../../components/Footer.astro"
+// import AddToCalendar from "../../components/AddToCalendarLink.astro"
 
-import calendarIcon23 from "../assets/icons/calendar-icon-23.svg"
+import calendarIcon23 from "../../assets/icons/calendar-icon-23.svg"
 let icsUrl = "/media/2026-07-23/English-PP-23-July-2026.ics"
 // "https://professionalsplatform.org/session/Professionals Platform - EAP.ics"
 
 import { Image } from "astro:assets"
-import photoKlug from "../assets/speakers/portrait-klug-dawn-marie-2026-07.jpg"
-import photoBarthwell from "../assets/speakers/portrait-barthwell-andrea-g-2026-07.jpg"
-import photoChow from "../assets/speakers/portrait-chow-matthew-c-2026-07.jpg"
+import photoKlug from "../../assets/speakers/portrait-klug-dawn-marie-2026-07.jpg"
+import photoBarthwell from "../../assets/speakers/portrait-barthwell-andrea-g-2026-07.jpg"
+import photoChow from "../../assets/speakers/portrait-chow-matthew-c-2026-07.jpg"
 ---
 
 <Layout>
@@ -20,7 +20,7 @@ import photoChow from "../assets/speakers/portrait-chow-matthew-c-2026-07.jpg"
         <div class="mb-4">
             <ul class="tabs">
                 <li class="tab selected">
-                    <span data-href="/session">23 July 2026</span>
+                    <span data-href="/sessions/2026-07">23 July 2026</span>
                 </li>
                 <li class="tab">
                     <a href="/sessions/2026-10">22 October 2026</a>
@@ -338,35 +338,34 @@ import photoChow from "../assets/speakers/portrait-chow-matthew-c-2026-07.jpg"
                 </div>
             </section>
         </div>
-        <Footer />
-
-        <style>
-            .speaker-card {
-                container-type: inline-size;
-            }
-
-            .speaker-info {
-                /* condensed (stacked) rules go here */
-                display: flex;
-                flex-direction: column;
-                .speaker-name {
-                    display: block;
-                }
-
-                /* spread-out rules go here */
-                @container (min-width: 48ch) {
-                    flex-direction: row;
-                    .speaker-photo {
-                        max-width: 33%;
-                    }
-                }
-            }
-
-            hr {
-                @container (min-width: 48ch) {
-                    display: none;
-                }
-            }
-        </style>
     </article>
+    <Footer />
+    <style>
+        .speaker-card {
+            container-type: inline-size;
+        }
+
+        .speaker-info {
+            /* condensed (stacked) rules go here */
+            display: flex;
+            flex-direction: column;
+            .speaker-name {
+                display: block;
+            }
+
+            /* spread-out rules go here */
+            @container (min-width: 48ch) {
+                flex-direction: row;
+                .speaker-photo {
+                    max-width: 33%;
+                }
+            }
+        }
+
+        hr {
+            @container (min-width: 48ch) {
+                display: none;
+            }
+        }
+    </style>
 </Layout>
