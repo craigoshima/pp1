@@ -1,0 +1,201 @@
+---
+interface Props {
+    class?: string;
+    moreText?: string;
+    lessText?: string;
+}
+
+const locale = Astro.currentLocale || "en";
+
+const defaultLabels: Record<string, { more: string; less: string }> = {
+    en: { more: "Show More >>", less: "Show Less <<" },
+    es: { more: "Mostrar más >>", less: "Mostrar menos <<" },
+    fr: { more: "Afficher plus >>", less: "Afficher moins <<" },
+};
+
+const labels = defaultLabels[locale] || defaultLabels.en;
+
+const {
+    class: className = "",
+    moreText = labels.more,
+    lessText = labels.less,
+} = Astro.props;
+---
+
+<expandable-bio
+    class:list={["block", className]}
+    data-more-text={moreText}
+    data-less-text={lessText}>
+    <slot />
+</expandable-bio>
+
+<script>
+    class ExpandableBio extends HTMLElement {
+        private _btn: HTMLButtonElement | null = null;
+        private _btnText: HTMLElement | null = null;
+        private _collapse: HTMLElement | null = null;
+        private _onToggleAll: ((e: CustomEvent<{ expanded: boolean }>) => void) | null = null;
+
+        connectedCallback() {
+            if (this.dataset.initialized === "true") return;
+            this.dataset.initialized = "true";
+
+            const paragraphs = Array.from(this.children).filter(
+                (el): el is HTMLParagraphElement => el.tagName === "P"
+            );
+
+            // Only expandable if there are more than 1 paragraph
+            if (paragraphs.length <= 1) return;
+
+            // Create animated collapse container for paragraphs 2..N
+            const collapseDiv = document.createElement("div");
+            collapseDiv.className = "bio-collapse";
+            collapseDiv.setAttribute("aria-hidden", "true");
+
+            const innerDiv = document.createElement("div");
+            innerDiv.className = "bio-collapse-inner";
+
+            for (let i = 1; i < paragraphs.length; i++) {
+                innerDiv.appendChild(paragraphs[i]);
+            }
+            collapseDiv.appendChild(innerDiv);
+            paragraphs[0].after(collapseDiv);
+
+            // Create toggle button
+            const moreLabel = this.dataset.moreText || "Show More >>";
+
+            const btnWrapper = document.createElement("div");
+            btnWrapper.className = "bio-toggle-wrapper";
+
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "bio-toggle link";
+            btn.setAttribute("aria-expanded", "false");
+
+            const btnText = document.createElement("span");
+            btnText.className = "bio-toggle-text";
+            btnText.textContent = moreLabel;
+            btn.appendChild(btnText);
+
+            btnWrapper.appendChild(btn);
+            this.appendChild(btnWrapper);
+
+            this._btn = btn;
+            this._btnText = btnText;
+            this._collapse = collapseDiv;
+
+            btn.addEventListener("click", () => {
+                const nextExpanded = this.dataset.expanded !== "true";
+                // Clicking one expands/collapses all expandable bios on the page
+                window.dispatchEvent(
+                    new CustomEvent("toggle-all-bios", {
+                        detail: { expanded: nextExpanded },
+                    })
+                );
+            });
+
+            this._onToggleAll = (e: CustomEvent<{ expanded: boolean }>) => {
+                this.setExpanded(e.detail.expanded);
+            };
+
+            window.addEventListener(
+                "toggle-all-bios",
+                this._onToggleAll as EventListener
+            );
+        }
+
+        disconnectedCallback() {
+            if (this._onToggleAll) {
+                window.removeEventListener(
+                    "toggle-all-bios",
+                    this._onToggleAll as EventListener
+                );
+            }
+        }
+
+        setExpanded(expanded: boolean) {
+            this.dataset.expanded = expanded ? "true" : "false";
+
+            if (this._btn && this._btnText) {
+                this._btn.setAttribute("aria-expanded", String(expanded));
+                this._btnText.textContent = expanded
+                    ? this.dataset.lessText || "Show Less <<"
+                    : this.dataset.moreText || "Show More >>";
+            }
+
+            if (this._collapse) {
+                this._collapse.setAttribute("aria-hidden", String(!expanded));
+            }
+        }
+    }
+
+    if (!customElements.get("expandable-bio")) {
+        customElements.define("expandable-bio", ExpandableBio);
+    }
+</script>
+
+<style>
+    expandable-bio {
+        display: block;
+    }
+
+    expandable-bio :global(.bio-collapse) {
+        display: grid;
+        grid-template-rows: 0fr;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s ease,
+            visibility 0.35s;
+        overflow: hidden;
+    }
+
+    expandable-bio[data-expanded="true"] :global(.bio-collapse) {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        visibility: visible;
+        transition:
+            grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+            opacity 0.3s ease;
+    }
+
+    expandable-bio :global(.bio-collapse-inner) {
+        min-height: 0;
+    }
+
+    expandable-bio :global(.bio-toggle-wrapper) {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 0.75rem;
+    }
+
+    expandable-bio :global(.bio-toggle) {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0;
+        background: none;
+        border: none;
+        font-size: 0.875rem;
+        font-weight: 600;
+        font-family: inherit;
+        color: var(--color-cyan-700);
+        cursor: pointer;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out;
+    }
+
+    expandable-bio :global(.bio-toggle:hover),
+    expandable-bio :global(.bio-toggle:focus-visible) {
+        color: var(--color-cyan-600);
+        text-decoration: underline;
+        outline: 2px solid transparent;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        expandable-bio :global(.bio-collapse) {
+            transition: none !important;
+        }
+    }
+</style>

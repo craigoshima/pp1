@@ -3,11 +3,13 @@ import Layout from "../../layouts/Layout.astro"
 import Header from "../../components/Header.astro"
 import Footer from "../../components/Footer.astro"
 import AddToCalendar from "../../components/AddToCalendarLink.astro"
+import ExpandableBio from "../../components/util/ExpandableBio.astro"
 
 import { Image } from "astro:assets"
 import photoMeyer from "../../assets/speakers/2026-10-22-portrait-meyer.jpg"
 import photoHourigan from "../../assets/speakers/2026-10-22-portrait-hourigan.jpg"
 import photoPhilp from "../../assets/speakers/2026-10-22-portrait-philp.jpg"
+import photoObrien from "../../assets/speakers/2026-10-22-portrait-obrien.jpg"
 import calendarIcon22 from "../../assets/icons/calendar-icon-22.svg"
 let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
 ---
@@ -121,7 +123,7 @@ let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
                     </div>
                 </div>
                 <hr class="border-zest-400 my-4" />
-                <div class="rounded-lg px-3 pb-3 text-sm">
+                <ExpandableBio class="rounded-lg px-3 pb-3 text-sm">
                     <p class="mt-2">
                         Kerry Meyer is the current Chief Judge of the trial
                         court in Minneapolis (Hennepin County) Minnesota. She is
@@ -131,7 +133,7 @@ let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
                         including over three years as a fulltime Treatment Court
                         judge.
                     </p>
-                </div>
+                </ExpandableBio>
             </div>
 
             <div
@@ -160,7 +162,7 @@ let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
                     </div>
                 </div>
                 <hr class="border-zest-400 my-4" />
-                <div class="rounded-lg px-3 pb-3 text-sm">
+                <ExpandableBio class="rounded-lg px-3 pb-3 text-sm">
                     <p class="mt-2">
                         Yvette Hourigan is the director of the Kentucky Lawyer
                         Assistance Program (KYLAP). Yvette graduated from Murray
@@ -212,7 +214,7 @@ let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
                         Banfield, CNN, Bloomberg Law, The Guardian, NPR, and in
                         The Huffington Post.
                     </p>
-                </div>
+                </ExpandableBio>
             </div>
 
             <div
@@ -244,7 +246,7 @@ let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
                     </div>
                 </div>
                 <hr class="border-zest-400 my-4" />
-                <div class="rounded-lg px-3 pb-3 text-sm">
+                <ExpandableBio class="rounded-lg px-3 pb-3 text-sm">
                     <p class="mt-2">
                         Justice Robert A. Philp, King’s Counsel, is a partner
                         with Twinn & Philp in Edmonton, Alberta, and a respected
@@ -299,7 +301,108 @@ let icsUrl = "/media/2026-10-22/Professionals-Platform-English.ics"
                         whose work reflects a lifelong commitment to justice,
                         public service, and strengthening the legal profession.
                     </p>
+                </ExpandableBio>
+            </div>
+        </section>
+
+        <h2 class="my-4 text-2xl font-bold">Featured Commentary</h2>
+        <section class="bios grid gap-4 md:grid-cols-3">
+            <div
+                class="card speaker-card bg-zest-100 overflow-hidden rounded-lg border border-gray-200">
+                <div class="speaker-info">
+                    <Image
+                        src={photoObrien}
+                        alt="Portrait of Justice Mary K. O’Brien"
+                        class="speaker-photo"
+                    />
+                    <div class="px-3 pt-2">
+                        <h4 class="mt-2 mb-2 font-bold">
+                            <span class="speaker-name text-xl">
+                                Justice Mary K. O’Brien
+                            </span>
+                        </h4>
+                        <div class="text-sm">
+                            <p class="mt-2">
+                                Illinois Supreme Court, Third District
+                            </p>
+                            <p class="mt-2">
+                                Emeritus Board Member, Illinois Lawyers’
+                                Assistance Program
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <hr class="border-zest-400 my-4" />
+                <ExpandableBio class="rounded-lg px-3 pb-3 text-sm">
+                    <p class="mt-2">
+                        Justice Mary Kay O’Brien has been a judge for over 20
+                        years, first on the Third District Appellate Court and
+                        most recently as a Justice on the Illinois Supreme
+                        Court, but her commitment to public service began long
+                        before her judicial career. As a student at Western
+                        Illinois University, O’Brien was elected to represent
+                        students on the Student Government Association and
+                        advocated for programming on the Committee on Student
+                        Activity Fees. Upon graduation, O’Brien worked for the
+                        Illinois Attorney General in the Kankakee Regional
+                        Office before entering the University of Illinois
+                        College of Law in August 1991.
+                    </p>
+                    <p class="mt-2">
+                        As a new lawyer, Justice O’Brien fine-tuned her advocacy
+                        skills, helping clients navigate the court system and in
+                        1996 she broadened the reach of her advocacy skills by
+                        winning a seat in the Illinois General Assembly. As a
+                        state representative, O’Brien worked tirelessly on
+                        behalf of working families and crime victims, working to
+                        increase the quality and availability of daycare, fought
+                        to expand the Family and Medical Leave Act as well as
+                        fighting to increase protection for victims of violent
+                        crimes. O’Brien chaired the Judiciary II Committee on
+                        Criminal Law, reforming the state’s death penalty
+                        statutes, championed reforms in the Grain Insurance
+                        Code, opened access to generic drugs for Illinois
+                        consumers and served as a taxpayer watchdog on the
+                        Illinois Audit Commission. Those experiences led O’Brien
+                        to seek a seat on the appellate court where her mission
+                        was to provide a level playing field for all parties to
+                        a dispute.
+                    </p>
+                    <p class="mt-2">
+                        On the appellate court, O’Brien served on numerous
+                        committees, including the Supreme Court Rules,
+                        Legislative, and Appellate Court Access to Justice
+                        Committees, the Illinois Courts’ Commission and the
+                        Lawyers Assistance Program. As a member of the Illinois
+                        Supreme Court, Justice O’Brien serves as the Court’s
+                        Liaison to the Supreme Court Rules Committee, the
+                        Supreme Court Committee on Juvenile Courts, the Lawyers
+                        Trust Fund and the Lawyers Assistance Program. O’Brien
+                        continues to work to increase her understanding of the
+                        law and has helped teach continuing legal education
+                        classes. She is active with several bar associations,
+                        including the Illinois State Bar Association, the
+                        Illinois Judges’ Association, the Women’s Bar
+                        Association of Illinois, the DuPage County Bar
+                        Association, the Will County Bar Association, and the
+                        Black Bar Association of Will County. Justice O’Brien
+                        was recently honored by the Illinois Judges Foundation
+                        with its Distinguished Service Award, as well as
+                        receiving the Illinois Bar Foundation’s Champion Award,
+                        and the Ruth Bader Ginsburg Award for Judicial
+                        Achievement Award from the Women’s Bar Association of
+                        Illinois.
+                    </p>
+                    <p class="mt-2">
+                        Justice O’Brien continues to be involved in the local
+                        community by assisting with the high school mock trial
+                        programs at Joliet West and Joliet Central High Schools,
+                        volunteering with the Mission Star Mission Shelter and
+                        recently with My Aging Services a non-profit aimed at
+                        assisting families with adult children with physical and
+                        developmental disabilities.
+                    </p>
+                </ExpandableBio>
             </div>
         </section>
     </article>
