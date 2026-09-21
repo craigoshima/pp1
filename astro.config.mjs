@@ -25,13 +25,13 @@ export default defineConfig({
         "/fr/session": "https://professionalsplatform.org/fr/sessions/2026-10",
 
         "/announcement":
-            "https://professionalsplatform.org/media/2026-10-22/PP-22-October-2026-Announcement-English.jpg",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-October-2026-Announcement-English.pdf",
         "/en/announcement":
-            "https://professionalsplatform.org/media/2026-10-22/PP-22-October-2026-Announcement-English.jpg",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-October-2026-Announcement-English.pdf",
         "/es/announcement":
-            "https://professionalsplatform.org/media/2026-10-22/PP-22-de-octubre-de-2026-Anuncio-Espanol.jpg",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-de-octubre-de-2026-Anuncio-Espanol.pdf",
         "/fr/announcement":
-            "https://professionalsplatform.org/media/2026-10-22/PP-22-octobre-2026-Annonce-Francais.jpg",
+            "https://professionalsplatform.org/media/2026-10-22/PP-22-octobre-2026-Annonce-Francais.pdf",
         "/faq": "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
         "/en/faq":
             "https://professionalsplatform.org/media/faq/Professionals_Platform_FAQ-en.docx",
